@@ -43,20 +43,18 @@
 				</div>
 				<!--//docs-logo-wrapper-->
 				<div class="docs-top-utilities d-flex justify-content-end align-items-center">
-					<div class="top-search-box d-none d-lg-flex">
+					<!--<div class="top-search-box d-none d-lg-flex">
 						<form class="search-form">
 							<input type="text" placeholder="Search the docs..." name="search"
 								class="form-control search-input">
 							<button type="submit" class="btn search-btn" value="Search"><i
 									class="fas fa-search"></i></button>
 						</form>
-					</div>
+					</div>-->
 
 					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://twitter.com/cargofive"><i class="fab fa-twitter fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://instagram.com/cargofive"><i class="fab fa-instagram fa-fw"></i></a></li>
 					</ul>
 					<!--//social-list-->
 
@@ -92,6 +90,15 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-5">Usuario</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-6">Cotizaciones</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-7">Compañías</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-8">Contactos</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-9">Tarifas</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-10">Cargos</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-11">Cargos globales</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-12">Tarifas con parámetros</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-13">Contratos</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-14">Navieras</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-15">Aerolíneas</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-16">Surcharges</a></li>
 					<!--<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder mr-2"><i class="fas fa-cogs"></i></span>Integrations</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Section Item 4.1</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Section Item 4.2</a></li>
@@ -126,7 +133,7 @@
 			<div class="container">
 				<article class="docs-article" id="section-1">
 					<header class="docs-header">
-						<h1 class="docs-heading">Cargofive <span class="docs-time">Last updated: 2019-06-01</span></h1>
+						<h1 class="docs-heading">Cargofive <span class="docs-time">Última actualización: 08-04-2020</span></h1>
 						<section class="docs-intro">
 							<p>Cargofive es una plataforma que permite buscar, comparar y gestionar las tarifas de
 								fletes marítimos entre distintas navieras en tiempo record, logrando obtener
@@ -394,7 +401,7 @@
 									entero.</li>
 							</ul>
 							<br>
-							<p><b>Retorna:</b>Listado JSON con el detalle de cada cotización asociada al usuario que
+							<p><b>Retorna:</b>Arreglo JSON con el detalle de cada cotización asociada al usuario que
 								consulta.</p>
 							<br>
 							<li><b>Cotización por ID</b></li>
@@ -413,7 +420,7 @@
 							<li><b>Compañías</b></li>
 							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/companies</code></p>
 							<p><code><b>Método:</b>GET</code></p>
-							<p><b>Retorna:</b> Listado JSON con el detalle de cada compañía cliente asociada al usuario
+							<p><b>Retorna:</b> Arreglo JSON con el detalle de cada compañía cliente asociada al usuario
 								que
 								consulta.</p>
 							<br>
@@ -436,7 +443,7 @@
 								<li><b>payment_conditions:</b> Condiciones de pago.</li>
 							</ul>
 							<br>
-							<p><b>Retorna:</b> Listado JSON con el detalle de cada compañía cliente asociada al usuario
+							<p><b>Retorna:</b> Arreglo JSON con el detalle de cada compañía cliente asociada al usuario
 								que
 								consulta.</p>
 							<br>
@@ -472,8 +479,133 @@
 							<p><code><b>Método:</b>DELETE</code></p>
 							<p><b>Parámetros</b></p>
 							<ul>
-								<li><b>ID:</b> Id de la compañía a modificar.</li>
+								<li><b>ID:</b> Id de la compañía a eliminar.</li>
 							</ul>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-8">
+						<ul>
+							<li><b>Contactos</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contacts</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Retorna:</b> Arreglo JSON con el detalle de cada contacto perteneciente a las compañías asociadas al usuario que consulta.</p>
+							<br>
+							<li><b>Crear contacto</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contact</code></p>
+							<p><code><b>Método:</b>POST</code></p>
+							<p><b>Parámetros</b></p>
+							<p>Parámetros (Marcados con * son obligatorios)</p>
+							<ul>
+								<li><b>first_name*:</b> Nombre de la compañía (único obligatorio).</li>
+								<li><b>last_name*:</b> Teléfono de la compañía.</li>
+								<li><b>email:</b> Dirección de correo electrónico.</li>
+								<li><b>phone:</b> Número de teléfono.</li>
+								<li><b>position:</b> Cargo que ocupa.</li>
+								<li><b>company_id*:</b> ID de la compañía a la que será asociado el contacto.</li>
+							</ul>
+							<br>
+							<li><b>Ver Contacto</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contact/ID</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Parámetros</b></p>
+							<ul>
+								<li><b>ID:</b> Id del contacto a consultar.</li>
+							</ul>
+							<br>
+							<p><b>Retorna:</b> JSON con el detalle del contacto solicitadao.</p>
+							<br>
+							<li><b>Actualizar Contacto</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contact/ID</code></p>
+							<p><code><b>Método:</b>PUT</code></p>
+							<p><b>Parámetros</b></p>
+							<ul>
+								<li><b>ID:</b> Id del contacto a modificar.</li>
+							</ul>
+							<p>
+								<b>Importante:</b> Al realizar con pruebas con postman puede que al enviar la petición
+								con PUT, este no complete la acción solicitada (Es una incidencia de postman documentada),
+								de ocurrir esto, cambie el método a POST y agregue dentro del form-data del body lo
+								siguiente: _method: PUT.
+							</p>
+							<br>
+							<li><b>Eliminar Contacto</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contact/ID</code></p>
+							<p><code><b>Método:</b>DELETE</code></p>
+							<p><b>Parámetros</b></p>
+							<ul>
+								<li><b>ID:</b> Id del contacto a eliminar.</li>
+							</ul>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-9">
+						<ul>
+							<li><b>Tarifas FCL</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/fcl/rates</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Retorna:</b> Arreglo JSON con el detalle de cada rate FCL asociado al usuario que consulta.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-10">
+						<ul>
+							<li><b>Recargos FCL</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/fcl/charges</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Retorna:</b> Arreglo JSON con el detalle de cada cargo FCL asociado al usuario que consulta.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-11">
+						<ul>
+							<li><b>Globalcharges FCL</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/fcl/global/charges</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Retorna:</b> Arreglo JSON con el detalle de cada cargo global FCL asociado al usuario que consulta.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-12">
+						<ul>
+							<li><b>Tarifas con parámetros</b></li>
+							<p><code><b>URL:</b>http://api.cargofive.com/search/rates/ORIGEN/DESTINO/INICIO/FIN</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Parámetros</b></p>
+							<ul>
+								<li><b>ORIGEN:</b>  Puerto de origen usando UN/LOCODE.</li>
+								<li><b>DESTINO:</b>  Puerto de destino usando UN/LOCODE.</li>
+								<li><b>INICIO:</b>  Fecha de validez inicial.</li>
+								<li><b>FIN:</b>  Fecha de validez final.</li>
+							</ul>
+							<p><b>Retorna:</b> Arreglo JSON con las tarifas para la ruta solicitada.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-13">
+						<ul>
+							<li><b>Contratos</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contracts</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Retorna:</b> Arreglo JSON con el detalle de cada contrato asociado al usuario que consulta.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-14">
+						<ul>
+							<li><b>Navieras</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/carriers</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Retorna:</b> Arreglo JSON con todos las navieras.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-15">
+						<ul>
+							<li><b>Aerolíneas</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/airlines</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Retorna:</b> Arreglo JSON con todos las aerolíneas.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-16">
+						<ul>
+							<li><b>Surcharges</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/surcharges</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Retorna:</b> Arreglo JSON con todos los surcharges asociados a la compañía del usuario autenticado.</p>
 						</ul>
 					</section>
 					<!--//section-->
@@ -526,14 +658,10 @@
 					<div class="container text-center py-5">
 						<small class="copyright">Template Copyright &copy; <a href="https://themes.3rdwavemedia.com/"
 								target="_blank">3rd Wave Media</a></small>
-						<ul class="social-list list-unstyled pt-4 mb-0">
-							<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
-						</ul>
+							<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+								<li class="list-inline-item"><a href="https://twitter.com/cargofive"><i class="fab fa-twitter fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="https://instagram.com/cargofive"><i class="fab fa-instagram fa-fw"></i></a></li>
+							</ul>
 						<!--//social-list-->
 					</div>
 				</footer>
