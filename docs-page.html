@@ -275,7 +275,7 @@
 								“Settings”, “API Settings” y finalmente ingresar en “API Tokens”.</p>
 							<p>En este módulo deberá seleccionar la opción “Add Password Grant Client”, con lo cual se
 								generarán de forma automática las credenciales adicionales, necesarias para realizar la
-								conexión al API. (Ver imagen 1)</p>
+								conexión al API.</p>
 
 							<li><b>Realizar pruebas con Potsman</b></li>
 							<p>Antes de llevar a cabo una integración completa probablemente querrá realizar algunas
@@ -303,7 +303,7 @@
 									válido, lo cual acredita que se encuentra correctamente autenticado.</p>
 								<p>Para obtener el Bearer Token deberá hacer una llamada POST al endpoint
 									https://app.cargofive.com/oauth/token junto con los siguientes parámetros que debe
-									configurar en la pestaña Body seleccionando form-data. (Ver imagen 3):</p>
+									configurar en la pestaña Body seleccionando form-data:</p>
 								<ul>
 									<li>client_id: El client id es obtenido en la sección API Tokens de la app
 										Cargofive.</li>
@@ -318,7 +318,7 @@
 									a los diferentes endpoints del API Cargofive. Para ello deberá copiar el valor que
 									se encuentra entre las comillas (“) y pegarlo en el valor Bearer Token ubicado en la
 									pestaña autorización para todas las peticiones que vaya a realizar hacia el API
-									Cargofive. (Ver imagen 4)</p>
+									Cargofive.</p>
 
 								<li><b>Petición de prueba</b></li>
 								<p>Al contar con un bearer token (access_token) válido podrá realizar las diferentes
@@ -326,7 +326,7 @@
 									deberá configurar el bearer token obtenido en el proceso previo. Antes de realizar
 									cualquier petición diríjase a la pestaña Authorization y en el desplegable Type
 									seleccione la opción Bearer Token y finalmente en el campo token pegue el valor del
-									bearer token (access_token). (Ver imagen 5)</p>
+									bearer token (access_token).</p>
 
 								<p>Configurado el bearer token, estará listo para poder realizar una petición válida al
 									API. En esta oportunidad se ejemplificará una petición GET para consultar rates al
