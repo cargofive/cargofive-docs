@@ -350,10 +350,15 @@
 					<!--//section-->
 					<section class="docs-section" id="item-3-3">
 						<h2 class="section-heading">Endpoints disponibles</h2>
-						<p>Para acceder a cada endpoint deberá contar con un bearer token válido. Adicionalmente, cada
-							petición cuenta con un parámetro opcional llamado “size” el cual limita la cantidad de
-							registros que retorna una solicitud.</p>
+						<p>Para acceder a cada endpoint deberá contar con un bearer token válido. Cada
+							petición cuenta con los siguientes parámetros opcionales:</p>
+						<ul>
+							<li>size (integer): Limita la cantidad de registros que devuelve una petición.</li>
+							<li>paginate (integer): Pagina los resultados de acuerdo al valor indicado.</li>
+						</ul>
 						<p>Cargofive REST API <code>https://app.cargofive.com/api/v1/</code></p>
+						
+						<p>Tenga en cuenta que hay algunos endpoints que apuntan a la URL: <code>https://api.cargofive.com/</code></p>
 					</section>
 					<section class="docs-section" id="item-3-4">
 						<ul>
@@ -428,18 +433,17 @@
 							<p><code><b>Método:</b>POST</code></p>
 							<p><b>Parámetros</b></p>
 							<ul>
-								<li><b>business_name:</b> Nombre de la compañía (único obligatorio).</li>
-								<li><b>phone:</b> Teléfono de la compañía.</li>
-								<li><b>address:</b> Dirección de la compañía.</li>
-								<li><b>email:</b> Dirección de correo electrónico.</li>
-								<li><b>tax_number:</b> Número de contribuyente.</li>
-								<li><b>company_user_id:</b> ID de la compañía a la que pertenece el usuario autenticado.
-								</li>
-								<li><b>owner:</b> ID del usuario autenticado.</li>
-								<li><b>pdf_language:</b> Lenguaje en el cual se genera el PDF para una cotización
+								<li><b>business_name* (string):</b> Nombre de la compañía (único obligatorio).</li>
+								<li><b>phone (string):</b> Teléfono de la compañía.</li>
+								<li><b>address (string):</b> Dirección de la compañía.</li>
+								<li><b>email (string):</b> Dirección de correo electrónico.</li>
+								<li><b>tax_number (string):</b> Número de contribuyente.</li>
+								<li><b>owner (integer):</b> ID del usuario autenticado.</li>
+								<li><b>options (json):</b> Permite guardar valores adicionales en un arreglo json.</li>
+								<li><b>pdf_language (enum | 'spanish','english','portuguese':</b> Lenguaje en el cual se genera el PDF para una cotización
 									asociada a
 									la compañía que se está creando.</li>
-								<li><b>payment_conditions:</b> Condiciones de pago.</li>
+								<li><b>payment_conditions (string):</b> Condiciones de pago.</li>
 							</ul>
 							<br>
 							<p><b>Retorna:</b> Arreglo JSON con el detalle de cada compañía cliente asociada al usuario
@@ -451,7 +455,7 @@
 							<p><code><b>Método:</b>GET</code></p>
 							<p><b>Parámetros</b></p>
 							<ul>
-								<li><b>ID:</b> Id de la compañía a consultar.</li>
+								<li><b>ID (integer):</b> Id de la compañía a consultar.</li>
 							</ul>
 							<br>
 							<p><b>Retorna:</b> JSON con el detalle de la compañía solicitada.</p>
@@ -461,7 +465,7 @@
 							<p><code><b>Método:</b>PUT</code></p>
 							<p><b>Parámetros</b></p>
 							<ul>
-								<li><b>ID:</b> Id de la compañía a modificar.</li>
+								<li><b>ID (integer):</b> Id de la compañía a modificar.</li>
 							</ul>
 							<p>
 								<b>Importante:</b> Al realizar con pruebas con postman puede que al enviar la petición
@@ -478,7 +482,7 @@
 							<p><code><b>Método:</b>DELETE</code></p>
 							<p><b>Parámetros</b></p>
 							<ul>
-								<li><b>ID:</b> Id de la compañía a eliminar.</li>
+								<li><b>ID (integer):</b> Id de la compañía a eliminar.</li>
 							</ul>
 						</ul>
 					</section>
@@ -495,12 +499,13 @@
 							<p><b>Parámetros</b></p>
 							<p>Parámetros (Marcados con * son obligatorios)</p>
 							<ul>
-								<li><b>first_name*:</b> Nombre de la compañía (único obligatorio).</li>
-								<li><b>last_name*:</b> Teléfono de la compañía.</li>
-								<li><b>email:</b> Dirección de correo electrónico.</li>
-								<li><b>phone:</b> Número de teléfono.</li>
-								<li><b>position:</b> Cargo que ocupa.</li>
-								<li><b>company_id*:</b> ID de la compañía a la que será asociado el contacto.</li>
+								<li><b>first_name* (string):</b> Nombre de la compañía (único obligatorio).</li>
+								<li><b>last_name* (string):</b> Teléfono de la compañía.</li>
+								<li><b>email (string):</b> Dirección de correo electrónico.</li>
+								<li><b>phone (string):</b> Número de teléfono.</li>
+								<li><b>position (string):</b> Cargo que ocupa.</li>
+								<li><b>options (json):</b> Permite guardar valores adicionales en un arreglo json.</li>
+								<li><b>company_id (integer):</b> ID de la compañía a la que será asociado el contacto.</li>
 							</ul>
 							<br>
 							<li><b>Ver Contacto</b></li>
@@ -508,7 +513,7 @@
 							<p><code><b>Método:</b>GET</code></p>
 							<p><b>Parámetros</b></p>
 							<ul>
-								<li><b>ID:</b> Id del contacto a consultar.</li>
+								<li><b>ID (integer):</b> Id del contacto a consultar.</li>
 							</ul>
 							<br>
 							<p><b>Retorna:</b> JSON con el detalle del contacto solicitadao.</p>
@@ -518,7 +523,7 @@
 							<p><code><b>Método:</b>PUT</code></p>
 							<p><b>Parámetros</b></p>
 							<ul>
-								<li><b>ID:</b> Id del contacto a modificar.</li>
+								<li><b>ID (integer):</b> Id del contacto a modificar.</li>
 							</ul>
 							<p>
 								<b>Importante:</b> Al realizar con pruebas con postman puede que al enviar la petición
@@ -532,7 +537,7 @@
 							<p><code><b>Método:</b>DELETE</code></p>
 							<p><b>Parámetros</b></p>
 							<ul>
-								<li><b>ID:</b> Id del contacto a eliminar.</li>
+								<li><b>ID (integer):</b> Id del contacto a eliminar.</li>
 							</ul>
 						</ul>
 					</section>
@@ -601,10 +606,22 @@
 					</section>
 					<section class="docs-section" id="item-3-16">
 						<ul>
-							<li><b>Surcharges</b></li>
+							<li><b>Lista de Surcharges</b></li>
 							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/surcharges</code></p>
 							<p><code><b>Método:</b>GET</code></p>
 							<p><b>Retorna:</b> Arreglo JSON con todos los surcharges asociados a la compañía del usuario autenticado.</p>
+							<br>
+							<li><b>Crear Surcharge</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/surcharge</code></p>
+							<p><code><b>Método:</b>POST</code></p>
+							<p><b>Parámetros</b></p>
+							<ul>
+								<li><b>name (string):</b> Nombre del surcharge.</li>
+								<li><b>description (string):</b> Descripción del surcharge.</li>
+								<li><b>options (json):</b> Permite guardar valores adicionales en un arreglo json.</li>
+							</ul>
+							<br>
+							<p><b>Retorna:</b> Registro recién creado</p>
 						</ul>
 					</section>
 					<!--//section-->
