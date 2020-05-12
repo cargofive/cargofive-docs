@@ -98,6 +98,7 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-14">Navieras</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-15">Aerolíneas</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-16">Surcharges</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-17">Generar PDF</a></li>
 					<!--<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder mr-2"><i class="fas fa-cogs"></i></span>Integrations</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Section Item 4.1</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Section Item 4.2</a></li>
@@ -350,8 +351,7 @@
 					<!--//section-->
 					<section class="docs-section" id="item-3-3">
 						<h2 class="section-heading">Endpoints disponibles</h2>
-						<p>Para acceder a cada endpoint deberá contar con un bearer token válido. Cada
-							petición cuenta con los siguientes parámetros opcionales:</p>
+						<p>Para acceder a cada endpoint deberá contar con un bearer token válido. Todas las peticiones tiene disponible los siguientes parámetros opcionales:</p>
 						<ul>
 							<li>size (integer): Limita la cantidad de registros que devuelve una petición.</li>
 							<li>paginate (integer): Pagina los resultados de acuerdo al valor indicado.</li>
@@ -622,6 +622,19 @@
 							</ul>
 							<br>
 							<p><b>Retorna:</b> Registro recién creado</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-17">
+						<ul>
+							<li><b>Generar PDF</b></li>
+							<p><code><b>URL:</b>https://api.cargofive.com/pdf</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Parámetros</b></p>
+							<ul>
+								<li><b>ID (integer):</b> Identificador único de la cotización.</li>
+							</ul>
+							<br>
+							<p><b>Retorna:</b> Archivo .pdf descargable.</p>
 						</ul>
 					</section>
 					<!--//section-->
