@@ -301,19 +301,19 @@
 								<p>Para realizar una operación sobre el API Cargofive deberá contar con Bearer Token
 									válido, lo cual acredita que se encuentra correctamente autenticado.</p>
 								<p>Para obtener el Bearer Token deberá hacer una llamada POST al endpoint
-									https://app.cargofive.com/oauth/token junto con los siguientes parámetros que debe
+									<b>https://app.cargofive.com/oauth/token</b> junto con los siguientes parámetros que debe
 									configurar en la pestaña Body seleccionando form-data:</p>
 								<ul>
-									<li>client_id: El client id es obtenido en la sección API Tokens de la app
+									<li><b>client_id:</b> El client id es obtenido en la sección API Tokens de la app
 										Cargofive.</li>
-									<li>client_secret: El client secret es obtenido en la sección API Tokens de la app
+									<li><b>client_secret:</b> El client secret es obtenido en la sección API Tokens de la app
 										Cargofive.</li>
-									<li>grant_type: Acá deberá colocar “password”.</li>
-									<li>username: El email con el cual se encuentra registrado en Cargofive.</li>
-									<li>password: El password que utiliza para el ingreso a Cargofive.</li>
+									<li><b>grant_type:</b> Acá deberá colocar “password”.</li>
+									<li><b>username:</b> El email con el cual se encuentra registrado en Cargofive.</li>
+									<li><b>password:</b> El password que utiliza para el ingreso a Cargofive.</li>
 								</ul>
 								<br>
-								<p>Al completar la petición se le entregará el “access_token” con el cual podrá acceder
+								<p>Al completar la petición se le entregará el <b>“access_token”</b> con el cual podrá acceder
 									a los diferentes endpoints del API Cargofive. Para ello deberá copiar el valor que
 									se encuentra entre las comillas (“) y pegarlo en el valor Bearer Token ubicado en la
 									pestaña autorización para todas las peticiones que vaya a realizar hacia el API
@@ -336,10 +336,10 @@
 
 								<p>Los parámetros que deben utilizarse en el endpoint son:</p>
 								<ul>
-									<li>ORIGEN: Puerto de Origen usando UN/LOCODE</li>
-									<li>DESTINO: Puerto de Destino usando UN/LOCODE</li>
-									<li>INICIO: Fecha de inicio de validez (YYYY-MM-DD)</li>
-									<li>FIN: Fecha de finalización de validez (YYYY-MM-DD)</li>
+									<li><b>ORIGEN:</b> Puerto de Origen usando UN/LOCODE</li>
+									<li><b>DESTINO:</b> Puerto de Destino usando UN/LOCODE</li>
+									<li><b>INICIO:</b> Fecha de inicio de validez (YYYY-MM-DD)</li>
+									<li><b>FIN:</b> Fecha de finalización de validez (YYYY-MM-DD)</li>
 								</ul>
 								<br>
 								<p>El resultado de esta operación será un json con la información correspondiente a los
