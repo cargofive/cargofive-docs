@@ -91,9 +91,9 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-7">Compañías</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-8">Contactos</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-9">Tarifas</a></li>
-					<!--<li class="nav-item"><a class="nav-link scrollto" href="#item-3-10">Cargos</a></li>-->
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-11">Gastos locales FCL</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-12">Tarifas con parámetros</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-10">Tarifas con parámetros sin agrupar</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-13">Contratos</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-14">Navieras</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-15">Aerolíneas</a></li>
@@ -544,14 +544,6 @@
 							<p><b>Retorna:</b> Arreglo JSON con el detalle de cada rate FCL asociado al usuario que consulta.</p>
 						</ul>
 					</section>
-					<!--<section class="docs-section" id="item-3-10">
-						<ul>
-							<li><b>Recargos FCL</b></li>
-							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/fcl/charges</code></p>
-							<p><code><b>Método:</b>GET</code></p>
-							<p><b>Retorna:</b> Arreglo JSON con el detalle de cada cargo FCL asociado al usuario que consulta.</p>
-						</ul>
-					</section>-->
 					<section class="docs-section" id="item-3-11">
 						<ul>
 							<li><b>Gastos locales FCL</b></li>
@@ -573,6 +565,21 @@
 								<li><b>FIN:</b>  Fecha de validez final (YYYY-MM-DD).</li>
 							</ul>
 							<p><b>Retorna:</b> Arreglo JSON con las tarifas para la ruta solicitada.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-10">
+						<ul>
+							<li><b>Tarifas con parámetros sin agrupar</b></li>
+							<p><code><b>URL:</b>https://api.cargofive.com/search/rates/nogroup/ORIGEN/DESTINO/INICIO/FIN</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Parámetros</b></p>
+							<ul>
+								<li><b>ORIGEN:</b>  Puerto de origen usando UN/LOCODE.</li>
+								<li><b>DESTINO:</b>  Puerto de destino usando UN/LOCODE.</li>
+								<li><b>INICIO:</b>  Fecha de validez inicial (YYYY-MM-DD).</li>
+								<li><b>FIN:</b>  Fecha de validez final (YYYY-MM-DD).</li>
+							</ul>
+							<p><b>Retorna:</b> Arreglo JSON con las tarifas para la ruta solicitada sin agrupar.</p>
 						</ul>
 					</section>
 					<section class="docs-section" id="item-3-13">
