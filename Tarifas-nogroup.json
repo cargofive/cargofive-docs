@@ -1,0 +1,104 @@
+﻿[
+  {
+    "Rates": {
+      "origin_port": {
+        "name": "Puerto Cabello",
+        "code": "VEPBL"
+      },
+      "destination_port": {
+        "name": "Valencia",
+        "code": "ESVLC"
+      },
+      "ocean_freight": {
+        "type": "Ocean Freight",
+        "detail": "Per Container",
+        "currency": "USD",
+        "rates": [
+          {
+            "type": "20RF",
+            "price": "100.00",
+            "currency": "USD"
+          },
+          {
+            "type": "40RF",
+            "price": "200.00",
+            "currency": "USD"
+          },
+          {
+            "type": "40HCRF",
+            "price": "300.00",
+            "currency": "USD"
+          }
+        ]
+      },
+      "freight_charges": [
+        {
+          "type": "20RF",
+          "surcharge_name": "LSS",
+          "surcharge_options": {
+            "code": "COD01"
+          },
+          "price": "496.00",
+          "currency": "USD",
+          "currency_id": 149,
+          "calculation_type": "Per 20 RF"
+        }
+      ],
+      "destination_charges": [
+        {
+          "type": "20RF",
+          "surcharge_name": "OHC",
+          "surcharge_options": {
+            "code": "COD01"
+          },
+          "price": "120.00",
+          "currency": "EUR",
+          "currency_id": 46,
+          "calculation_type": "Per 20 RF"
+        }
+      ],
+      "origin_charges": [
+        {
+          "type": "20RF",
+          "surcharge_name": "THC",
+          "surcharge_options": {
+            "code": "COD01"
+          },
+          "price": "120.00",
+          "currency": "USD",
+          "currency_id": 149,
+          "calculation_type": "Per Container RF"
+        },
+        {
+          "type": "20RF",
+          "surcharge_name": "CFD",
+          "surcharge_options": {
+            "code": "COD01"
+          },
+          "price": "280.00",
+          "currency": "USD",
+          "currency_id": 149,
+          "calculation_type": "Per 20 RF"
+        }
+      ],
+      "total20RF": "1246.99",
+      "total40RF": "200.00",
+      "total40HCRF": "300.00",
+      "currency": "USD",
+      "carrier": {
+        "id": 4,
+        "name": "COSCO",
+        "uncode": null,
+        "image": "https://cargofive-dev-test.s3.eu-central-1.amazonaws.com/imgcarrier/cosco.png"
+      },
+      "contract": {
+        "valid_from": "2020-06-01",
+        "valid_until": "2020-12-31",
+        "number": null,
+        "ref": "Lorem Ipsum",
+        "status": "published"
+      },
+      "remarks": "<br><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p><br>"
+    }
+  }
+]
