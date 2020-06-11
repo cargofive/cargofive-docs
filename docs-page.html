@@ -133,7 +133,7 @@
 			<div class="container">
 				<article class="docs-article" id="introduction">
 					<header class="docs-header">
-						<h1 class="docs-heading">Cargofive <span class="docs-time">Última actualización: 11-05-2020</span></h1>
+						<h1 class="docs-heading">Cargofive <span class="docs-time">Última actualización: 11-06-2020</span></h1>
 						<section class="docs-intro">
 							<p>Cargofive es una plataforma que permite buscar, comparar y gestionar las tarifas de
 								fletes marítimos entre distintas navieras en tiempo record, logrando obtener
@@ -555,7 +555,7 @@
 					<section class="docs-section" id="item-3-12">
 						<ul>
 							<li><b>Tarifas con parámetros</b></li>
-							<p><code><b>URL:</b>https://api.cargofive.com/search/rates/ORIGEN/DESTINO/INICIO/FIN</code></p>
+							<p><code><b>URL:</b>https://api.cargofive.com/search/rates/group/ORIGEN/DESTINO/INICIO/FIN/TIPO</code></p>
 							<p><code><b>Método:</b>GET</code></p>
 							<p><b>Parámetros</b></p>
 							<ul>
@@ -563,6 +563,7 @@
 								<li><b>DESTINO:</b>  Puerto de destino usando UN/LOCODE.</li>
 								<li><b>INICIO:</b>  Fecha de validez inicial (YYYY-MM-DD).</li>
 								<li><b>FIN:</b>  Fecha de validez final (YYYY-MM-DD).</li>
+								<li><b>TIPO:</b>  DRY, REEFER, OPENTOP y FLATRACK.</li>
 							</ul>
 							<br>
 							<p><b>Retorna:</b> Arreglo JSON con las tarifas para la ruta solicitada.</p>
@@ -572,7 +573,7 @@
 					<section class="docs-section" id="item-3-10">
 						<ul>
 							<li><b>Tarifas con parámetros sin agrupar</b></li>
-							<p><code><b>URL:</b>https://api.cargofive.com/search/rates/nogroup/ORIGEN/DESTINO/INICIO/FIN</code></p>
+							<p><code><b>URL:</b>https://api.cargofive.com/search/rates/nogroup/ORIGEN/DESTINO/INICIO/FIN/TIPO</code></p>
 							<p><code><b>Método:</b>GET</code></p>
 							<p><b>Parámetros</b></p>
 							<ul>
@@ -580,6 +581,7 @@
 								<li><b>DESTINO:</b>  Puerto de destino usando UN/LOCODE.</li>
 								<li><b>INICIO:</b>  Fecha de validez inicial (YYYY-MM-DD).</li>
 								<li><b>FIN:</b>  Fecha de validez final (YYYY-MM-DD).</li>
+								<li><b>TIPO:</b>  DRY, REEFER, OPENTOP y FLATRACK.</li>
 							</ul>
 							<br>
 							<p><b>Retorna:</b> Arreglo JSON con las tarifas para la ruta solicitada sin agrupar.</p>
