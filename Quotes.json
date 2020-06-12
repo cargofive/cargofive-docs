@@ -1,0 +1,385 @@
+{
+        "id": 1,
+        "quote_id": "CA-1",
+        "custom_quote_id": "CARGO-01",
+        "type": "FCL",
+        "delivery": "1",
+        "equipment": [
+            "20RF",
+            "40RF",
+            "40HCRF"
+        ],
+        "cargo_type": null,
+        "total_quantity": null,
+        "total_volume": null,
+        "total_weight": null,
+        "chargeable_weight": null,
+        "company_id": 1,
+        "contact_id": 1,
+        "price_id": null,
+        "valid_from": "2020-06-08",
+        "valid_until": "2020-06-08",
+        "commodity": null,
+        "kind_of_cargo": null,
+        "gdp": 0,
+        "risk_level": null,
+        "date_issued": "2020-06-08",
+        "incoterm_id": 1,
+        "company_user_id": 1,
+        "status": "Draft",
+        "payment_conditions": null,
+        "terms_and_conditions": "",
+        "terms_english": "",
+        "terms_portuguese": "",
+        "created_at": "2020-06-08 19:33:32",
+        "updated_at": "2020-06-12 00:10:05",
+        "rates_v2": [
+            {
+                "id": 39,
+                "quote_id": 54,
+                "contract": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+                "valid_from": "2020-06-08",
+                "valid_until": "2020-06-08",
+                "origin_port_id": 1462,
+                "destination_port_id": 962,
+                "carrier_id": 4,
+                "airline_id": null,
+                "currency_id": 149,
+                "remarks": "<br>",
+                "remarks_english": "<br><p>Testing Export</p><br><br><br>",
+                "remarks_spanish": "<br><br>",
+                "remarks_portuguese": "<br><br>",
+                "schedule_type": null,
+                "transit_time": null,
+                "via": null,
+                "origin_airport": null,
+                "destination_airport": null,
+                "carrier": {
+                    "id": 4,
+                    "name": "COSCO",
+                    "uncode": null,
+                    "url": "https://cargofive-production.s3.eu-central-1.amazonaws.com/imgcarrier/cosco.png"
+                },
+                "airline": null,
+                "origin_port": {
+                    "id": 1462,
+                    "name": "Puerto Cabello",
+                    "code": "VEPBL",
+                    "display_name": "Puerto Cabello, VEPBL",
+                    "coordinates": "10.47953 -68.0093",
+                    "country_id": 234,
+                    "country": {
+                        "id": 234,
+                        "code": "VE",
+                        "name": "Venezuela",
+                        "continent": "SA"
+                    }
+                },
+                "currency": {
+                    "id": 149,
+                    "alphacode": "USD"
+                },
+                "destination_port": {
+                    "id": 962,
+                    "name": "Valencia",
+                    "code": "ESVLC",
+                    "display_name": "Valencia, ESVLC",
+                    "coordinates": "39.45913 -0.323",
+                    "country_id": 66,
+                    "country": {
+                        "id": 66,
+                        "code": "ES",
+                        "name": "Spain",
+                        "continent": "EU"
+                    }
+                },
+                "charge": [
+                    {
+                        "id": 22,
+                        "automatic_rate_id": 39,
+                        "type_id": 3,
+                        "surcharge_id": null,
+                        "calculation_type_id": 5,
+                        "price": {
+                            "c40HCRF": "300.00",
+                            "c40RF": "200.00",
+                            "c20RF": "100.00"
+                        },
+                        "markup": {
+                            "m40HCRF": "0",
+                            "m40RF": "0",
+                            "m20RF": "0"
+                        },
+                        "total_price": {
+                            "c40HCRF": "300.00",
+                            "c40RF": "200.00",
+                            "c20RF": "100.00"
+                        },
+                        "currency_id": 149,
+                        "type": {
+                            "id": 3,
+                            "description": "freight"
+                        },
+                        "surcharge": null,
+                        "calculation_type": {
+                            "id": 5,
+                            "name": "Per Container DRY",
+                            "code": "CONT",
+                            "display_name": null
+                        },
+                        "currency": {
+                            "id": 149,
+                            "alphacode": "USD"
+                        }
+                    },
+                    {
+                        "id": 23,
+                        "automatic_rate_id": 39,
+                        "type_id": 1,
+                        "surcharge_id": 2,
+                        "calculation_type_id": 19,
+                        "price": {
+                            "c20RF": "400.00"
+                        },
+                        "markup": {
+                            "m20RF": "0.00"
+                        },
+                        "currency_id": 149,
+                        "type": {
+                            "id": 1,
+                            "description": "origin"
+                        },
+                        "surcharge": {
+                            "id": 2,
+                            "name": "LSS",
+                            "description": "Testing",
+                            "options": {
+                                "code": "COD01"
+                            }
+                        },
+                        "calculation_type": {
+                            "id": 19,
+                            "name": "Per container RF",
+                            "code": "CONT RF",
+                            "display_name": null
+                        },
+                        "currency": {
+                            "id": 149,
+                            "alphacode": "USD"
+                        }
+                    },
+                    {
+                        "id": 24,
+                        "automatic_rate_id": 39,
+                        "type_id": 1,
+                        "surcharge_id": 1,
+                        "calculation_type_id": 19,
+                        "price": {
+                            "c20RF": "120.00"
+                        },
+                        "markup": {
+                            "m20RF": "0.00"
+                        },
+                        "currency_id": 149,
+                        "type": {
+                            "id": 1,
+                            "description": "origin"
+                        },
+                        "surcharge": {
+                            "id": 1,
+                            "name": "CFD",
+                            "description": "Test",
+                            "options": {
+                                "code": "COD01"
+                            }
+                        },
+                        "calculation_type": {
+                            "id": 19,
+                            "name": "Per container Reefer",
+                            "code": "CONT RF",
+                            "display_name": null
+                        },
+                        "currency": {
+                            "id": 149,
+                            "alphacode": "USD"
+                        }
+                    },
+                    {
+                        "id": 25,
+                        "automatic_rate_id": 39,
+                        "type_id": 2,
+                        "surcharge_id": 2,
+                        "calculation_type_id": 19,
+                        "price": {
+                            "c20RF": "120.00"
+                        },
+                        "markup": {
+                            "m20RF": "0.00"
+                        },
+                        "total_price": {
+                            "m20RF": "0.00"
+                        },
+                        "currency_id": 46,
+                        "type": {
+                            "id": 2,
+                            "description": "destiny"
+                        },
+                        "surcharge": {
+                            "id": 2,
+                            "name": "LSS",
+                            "description": "Testing",
+                            "options": {
+                                "code": "COD01"
+                            }
+                        },
+                        "calculation_type": {
+                            "id": 19,
+                            "name": "Per container Reefer",
+                            "code": "CONT RF",
+                            "display_name": null
+                        },
+                        "currency": {
+                            "id": 46,
+                            "alphacode": "EUR"
+                        }
+                    },
+                    {
+                        "id": 26,
+                        "automatic_rate_id": 39,
+                        "type_id": 3,
+                        "surcharge_id": 1,
+                        "calculation_type_id": 19,
+                        "price": {
+                            "c20RF": "496.00"
+                        },
+                        "markup": {
+                            "m20RF": "0.00"
+                        },
+                        "total_price": {
+                            "m20RF": "0.00"
+                        },
+                        "currency_id": 149,
+                        "type": {
+                            "id": 3,
+                            "description": "freight"
+                        },
+                        "surcharge": {
+                            "id": 1,
+                            "name": "CFD",
+                            "description": "Test",
+                            "options": {
+                                "code": "COD01"
+                            }
+                        },
+                        "calculation_type": {
+                            "id": 19,
+                            "name": "Per container RF",
+                            "code": "CONT RF",
+                            "display_name": null
+                        },
+                        "currency": {
+                            "id": 149,
+                            "alphacode": "USD"
+                        }
+                    }
+                ],
+                "charge_lcl_air": [],
+                "inland": [],
+                "automatic_inland_lcl_air": []
+            }
+        ],
+        "user": null,
+        "company": {
+            "id": 1,
+            "business_name": "Test Company",
+            "phone": "123719397",
+            "address": "Avenida Portugal 755",
+            "email": "testing@example.com",
+            "tax_number": "13179",
+            "logo": null,
+            "associated_quotes": null,
+            "company_user_id": 1,
+            "owner": {
+                "id": 1,
+                "name": "Frank",
+                "lastname": "Smith",
+                "email": "frank@example.com",
+                "phone": "+18631979625",
+                "type": "admin"
+            },
+            "api_id": null,
+            "api_status": null,
+            "pdf_language": "0",
+            "payment_conditions": null,
+            "options": {
+                "external_company_id": "BY012"
+            },
+            "created_at": "2020-02-17 23:37:42",
+            "updated_at": "2020-06-05 20:15:40",
+            "company_user": {
+                "id": 1,
+                "name": "Cargofive",
+                "address": "Portugal",
+                "phone": "36586289542",
+                "currency_id": 46,
+                "currency": {
+                    "id": 46,
+                    "alphacode": "EUR"
+                }
+            }
+        },
+        "contact": {
+            "id": 1,
+            "first_name": "John",
+            "last_name": "Ryan",
+            "email": "john@ryan.com",
+            "phone": "1371939",
+            "position": null,
+            "company_id": 1,
+            "options": {
+                "code": "1"
+            },
+            "created_at": "2020-02-17 23:38:00",
+            "updated_at": "2020-06-06 00:33:00",
+            "company": {
+                "id": 1,
+                "business_name": "Test Company",
+                "phone": "123719397",
+                "address": "Avenida Portugal 755",
+                "email": "testing@example.com",
+                "tax_number": "13179"
+            }
+        },
+        "price": null,
+	"saleterm": {
+            "id": 4,
+            "quote_id": 56,
+            "port_id": 1462,
+            "airport_id": null,
+            "type": "Origin",
+            "created_at": "2020-06-11 22:07:58",
+            "updated_at": "2020-06-11 22:07:58",
+            "charge": [
+                {
+                    "id": 4,
+                    "sale_term_id": 4,
+                    "charge": "Sale term",
+                    "detail": "Test",
+                    "units": null,
+                    "amount": null,
+                    "rate": "{"c20RF": "765", "c40RF": "158"}",
+                    "markup": null,
+                    "currency_id": 46,
+                    "total": null,
+                    "created_at": "2020-06-11 22:07:58",
+                    "updated_at": "2020-06-11 22:08:43"
+                }
+            ]
+        },
+        "incoterm": {
+            "id": 1,
+            "name": "EWX",
+            "created_at": null,
+            "updated_at": null
+        }
+    }
