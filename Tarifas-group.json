@@ -31,34 +31,38 @@
           }
         ]
       },
-      "freight_charges": [
-        {
-          "type": "20RF",
-          "surcharge_name": "LSS",
-          "surcharge_options": {
-            "code": "COD01"
-          },
-          "price": "496.00",
-          "currency": "USD",
-          "currency_id": 149,
-          "calculation_type": "Per 20 RF"
-        }
-      ],
-      "destination_charges": [
-        {
-          "type": "20RF",
-          "surcharge_name": "OHC",
-          "surcharge_options": {
-            "code": "COD01"
-          },
-          "price": "120.00",
-          "currency": "EUR",
-          "currency_id": 46,
-          "calculation_type": "Per 20 RF"
-        }
-      ],
+      "freight_charges": {
+         "LSS": [
+            {
+              "type": "20RF",
+              "surcharge_name": "LSS",
+              "surcharge_options": {
+                 "code": "COD01"
+              },
+              "price": "496.00",
+              "currency": "USD",
+              "currency_id": 149,
+              "calculation_type": "Per 20 RF"
+            }
+         ]
+      },
+      "destination_charges": {
+	 "OHC": [
+            {
+              "type": "20RF",
+              "surcharge_name": "OHC",
+              "surcharge_options": {
+                 "code": "COD01"
+              },
+              "price": "120.00",
+              "currency": "EUR",
+              "currency_id": 46,
+              "calculation_type": "Per 20 RF"
+            }
+	 ]
+      },
       "origin_charges": {
-	"THC":[ #Se agrupan por surcharges
+	"THC":[
            {
              "type": "20RF",
              "surcharge_name": "THC",
