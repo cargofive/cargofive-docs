@@ -329,8 +329,9 @@
 
 								<p>Configurado el bearer token, estará listo para poder realizar una petición válida al
 									API. En esta oportunidad se ejemplificará una petición GET para consultar rates al
-									siguiente endpoint: <a
-										href="#">https://api.cargofive.com/search/rates/ORIGEN/DESTINO/INICIO/FIN</a></p>
+									siguiente endpoint: 
+									<br>
+									<a href="#">https://api.cargofive.com/search/rates/group/ORIGEN/DESTINO/INICIO/FIN/TIPO</a></p>
 
 								<p><b>Método:</b> GET</p>
 
@@ -340,6 +341,7 @@
 									<li><b>DESTINO:</b> Puerto de Destino usando UN/LOCODE</li>
 									<li><b>INICIO:</b> Fecha de inicio de validez (YYYY-MM-DD)</li>
 									<li><b>FIN:</b> Fecha de finalización de validez (YYYY-MM-DD)</li>
+									<li><b>TIPO:</b>  DRY, REEFER, OPENTOP y FLATRACK.</li>
 								</ul>
 								<br>
 								<p>El resultado de esta operación será un json con la información correspondiente a los
