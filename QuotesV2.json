@@ -1,0 +1,158 @@
+{
+   "data":[
+      {
+         "id":1,
+         "type":"FCL",
+         "quote_id":"CA-1",
+         "custom_quote_id":null,
+         "equipment":[
+            "40HCRF"
+         ],
+         "valid_from":"2020-11-23",
+         "valid_until":"2020-12-31",
+         "date_issued":"2020-11-23",
+         "status":"Win",
+         "incoterm":"CFR",
+         "delivery":"Port to Port",
+         "cargo_type":null,
+         "total_quantity":null,
+         "total_weight":null,
+         "total_volume":null,
+         "chargeable_weight":null,
+         "kind_of_cargo":"Perishable",
+         "gdp":null,
+         "risk_level":null,
+         "commodity":"Fruits",
+         "spanish_remarks":"",
+         "english_remarks":null,
+         "portuguese_remarks":null,
+         "localcharge_remarks":null,
+         "spanish_terms_conditions":"",
+         "portuguese_terms_conditions":"",
+         "payment_conditions":null,
+         "owner":"Cargofive",
+         "created_by":"Mike Miller",
+         "created_at":"2020-11-23 14:01:49",
+         "updated_at":"2020-11-23 14:03:09",
+         "company":{
+            "business_name":"ABC Company",
+            "address":"VIGNOLA - ITALIA",
+            "phone":"0039 015 76"
+         },
+         "contact":{
+            "first_name":"James",
+            "last_name":"Bond",
+            "email":"james@company.com",
+            "phone":null
+         },
+         "ocean_freight":[
+            {
+               "id":1,
+               "contract":"Example MSC",
+               "valid_from":"2020-11-23",
+               "valid_until":"2020-12-31",
+               "profit":{
+                  "m40HCRF":"50"
+               },
+               "total":{
+                  "c40HCRF":650
+               },
+               "origin":"Sines, PTSIE",
+               "destiny":"SANTOS, BRSSZ",
+               "transit_time":"12",
+               "via":null,
+               "carrier":{
+                  "id":14,
+                  "name":"MSC",
+                  "url":"https://cargofive-production.s3.eu-central-1.amazonaws.com/imgcarrier/msc.png"
+               },
+               "charges":[
+                  {
+                     "id":1,
+                     "charge":"Ocean Freight",
+                     "calculation_type":"Per Container DRY",
+                     "price":{
+                        "c40HCRF":"600.00"
+                     },
+                     "profit":{
+                        "m40HCRF":"0"
+                     },
+                     "currency":"EUR"
+                  }
+               ]
+            }
+         ],
+         "origin_charges":[
+            {
+               "id":1,
+               "charge":"GASTOS DE EMBARQUE MERCANCÍA",
+               "calculation_type":"Per 40 HCRF",
+               "port":"Sines, PTSIE",
+               "price":{
+                  "c40HCRF":145
+               },
+               "profit":{
+                  "m40HCRF":130
+               },
+               "total":{
+                  "c40HCRF":275
+               },
+               "currency":"EUR"
+            }
+         ],
+         "destination_charges":[
+            {
+               "id":1,
+               "charge":"GASTOS DE DESEMBARQUE MERCANCÍA",
+               "calculation_type":"Per 40 HCRF",
+               "port":"Sines, PTSIE",
+               "price":{
+                  "c40HCRF":145
+               },
+               "profit":{
+                  "m40HCRF":130
+               },
+               "total":{
+                  "c40HCRF":275
+               },
+               "currency":"EUR"
+            }
+         ],
+         "inlands":[
+            {
+               "id":1,
+               "type":"Origin",
+               "contract":"1",
+               "distance":456,
+               "port":"Sines, PTSIE",
+               "address":"Río Córdoba, España",
+               "provider":"MSC",
+               "valid_from":"2020-11-23",
+               "valid_until":"2020-11-23",
+               "price":{
+                  "c40HCRF":1025
+               },
+               "profit":{
+                  "m40HCRF":0
+               },
+               "currency":"EUR"
+            }
+         ]
+      }
+   ],
+   "links":{
+      "first":"https://app.cargofive.com/api/v2/quotes?page=1",
+      "last":"https://app.cargofive.com/api/v2/quotes?page=1",
+      "prev":null,
+      "next":null
+   },
+   "meta":{
+      "current_page":1,
+      "from":1,
+      "last_page":1,
+      "path":"https://app.cargofive.com/api/v2/quotes",
+      "per_page":"100",
+      "to":100,
+      "total":100
+   }
+}
