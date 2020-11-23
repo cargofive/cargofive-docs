@@ -88,6 +88,7 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-4">Obtener Token</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-5">Usuario</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-6">Cotizaciones</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-19">Cotizaciones V2</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-7">Compañías</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-8">Contactos</a></li>
 					<!--<li class="nav-item"><a class="nav-link scrollto" href="#item-3-9">Tarifas</a></li>-->
@@ -309,6 +310,38 @@
 							<br>
 							<li><b>Cotización por ID</b></li>
 							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/quotes/ID</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Parámetros</b></p>
+							<ul>
+								<li><b>ID:</b> ID de la cotización a consultar.</li>
+							</ul>
+							<br>
+							<p><b>Retorna:</b> JSON con el detalle de la cotización solicitada.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-19">
+						<ul>
+							<li><b>Lista de cotizaciones</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v2/quotes</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Parámetros</b></p>
+							<ul>
+								<li><b>Integration:</b> True //Si el valor es true, el listado solo devolverá
+									cotizaciones
+									nuevas y/o editadas recientementes, obviando aquellas que ya han sido integradas con
+									anterioridad.</li>
+								<li><b>Type:</b> FCL, LCL o AIR.</li>
+								<li><b>Status:</b> Win, Draft, Sent, Negotiated, Lost.</li>
+								<li><b>Paginate:</b> Permite indicar la cantidad de registros a obtener por página. Indicar un
+									número
+									entero.</li>
+							</ul>
+							<br>
+							<p><b>Retorna:</b> Arreglo JSON con listado de cotizaciones. Por defecto, el resultado está paginado a un máximo de 100 registros por página.</p>
+							<p><b>Modelo:</b> <a href="QuotesV2.json" download>Descargar JSON</a></p>
+							<br>
+							<li><b>Cotización por ID</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v2/quotes/ID</code></p>
 							<p><code><b>Método:</b>GET</code></p>
 							<p><b>Parámetros</b></p>
 							<ul>
