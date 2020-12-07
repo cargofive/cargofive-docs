@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CargofiveDocs</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="Cargofive Documentation">
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+	<!-- FontAwesome JS-->
+	<script defer src="../assets/fontawesome/js/all.min.js"></script>
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="../assets/css/theme.css">
+
+</head>
+
+<body class="docs-page">
+	<header class="header fixed-top">
+		<div class="branding docs-branding">
+			<div class="container-fluid position-relative py-2">
+				<div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none"
+						type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="site-logo"><a class="navbar-brand" href="index.html"><span
+								class="logo-text">Cargofive<span class="text-alt">Docs</span></span></a></div>
+				</div>
+				<!--//docs-logo-wrapper-->
+				<div class="docs-top-utilities d-flex justify-content-end align-items-center">
+					<!--<div class="top-search-box d-none d-lg-flex">
+						<form class="search-form">
+							<input type="text" placeholder="Search the docs..." name="search"
+								class="form-control search-input">
+							<button type="submit" class="btn search-btn" value="Search"><i
+									class="fas fa-search"></i></button>
+						</form>
+					</div>-->
+
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="https://docs.cargofive.com/docs-page.html#api"><img src="../assets/images/spain-flag.png" title="Change to Spanish" alt="Change to Spanish"></img></a></li>
+						<li class="list-inline-item"><a href="https://twitter.com/cargofive" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://instagram.com/cargofive" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
+					</ul>
+					<!--//social-list-->
+
+				</div>
+				<!--//docs-top-utilities-->
+			</div>
+			<!--//container-->
+		</div>
+		<!--//branding-->
+	</header>
+	<!--//header-->
+
+	<div class="docs-wrapper">
+		<div id="docs-sidebar" class="docs-sidebar">
+			<div class="top-search-box d-lg-none p-3">
+				<form class="search-form">
+					<input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+					<button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				</form>
+			</div>
+			<nav id="docs-nav" class="docs-nav navbar">
+				<ul class="section-items list-unstyled nav flex-column pb-3">
+					<li class="nav-item section-title"><a class="nav-link scrollto active" href="#introduction"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Introduction</a>
+					</li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#api"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-box"></i></span>APIs</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">API Rest</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">First steps API Cargofive</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Endpoints available</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-4">Get Token</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-5">Users</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-6">Quotes</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-19">Quotes V2</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-7">Companies</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-8">Contacts</a></li>
+					<!--<li class="nav-item"><a class="nav-link scrollto" href="#item-3-9">Tarifas</a></li>-->
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-11">Local charges FCL</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-12">Rates with parameters</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-10">Rates with parameters without grouping</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-13">Contracts</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-14">Shipping Companies</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-15">Airlines</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-16">Surcharges</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-17">Create PDF</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-18">Changelog</a></li>
+					<!--<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder mr-2"><i class="fas fa-cogs"></i></span>Integrations</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Section Item 4.1</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Section Item 4.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">Section Item 4.3</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder mr-2"><i class="fas fa-tools"></i></span>Utilities</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Section Item 5.1</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Section Item 5.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">Section Item 5.3</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder mr-2"><i class="fas fa-laptop-code"></i></span>Web</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">Section Item 6.1</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-2">Section Item 6.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-3">Section Item 6.3</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span class="theme-icon-holder mr-2"><i class="fas fa-tablet-alt"></i></span>Mobile</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">Section Item 7.1</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Section Item 7.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-3">Section Item 7.3</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span class="theme-icon-holder mr-2"><i class="fas fa-book-reader"></i></span>Resources</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">Section Item 8.1</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">Section Item 8.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">Section Item 8.3</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span class="theme-icon-holder mr-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section Item 9.1</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Section Item 9.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Section Item 9.3</a></li>-->
+				</ul>
+
+			</nav>
+			<!--//docs-nav-->
+		</div>
+		<!--//docs-sidebar-->
+		<div class="docs-content">
+			<div class="container">
+				<article class="docs-article" id="introduction">
+					<header class="docs-header">
+						<h1 class="docs-heading">Cargofive <span class="docs-time">Last update: 07-12-2020</span></h1>
+						<section class="docs-intro">
+							<p>Cargofive is a platform that allows you to search, compare and manage maritime freight rates between different shipping companies in record time, managing to obtain quotes in just a few minutes.</p>
+						</section>
+						<!--//docs-intro-->
+					</header>
+				</article>
+
+				<article class="docs-article" id="api">
+					<header class="docs-header">
+						<h1 class="docs-heading">APIs</h1>
+					</header>
+					<section class="docs-section" id="item-3-1">
+						<h2 class="section-heading">API Rest</h2>
+						<p>API is a set of rules and specifications that applications can follow to communicate with each other. So that we understand it, the use of an API is the most useful mechanism to connect two softwares with each other, in this way, we can guarantee the exchange of messages or data in standard format.</p>
+						<ul>
+							<li><b>Available operations</b></li>
+							<p>The operations available in the API environment are POST (create), GET (read and query), PUT (edit) and DELETE (delete).</p>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-3-2">
+
+						<h2 class="section-heading">First steps API Cargofive</h2>
+						<ul>
+							<li><b>Get API Key</b></li>
+							<p>In order to access the Cargofive API, you will need to have a registered and active user on our platform. Once this is accomplished, you must request the additional credentials that will allow you to obtain an access token. From Cargofive you will be provided with all the necessary data to complete this process.</p>
+
+							<li><b>Testing with Potsman</b></li>
+							<p>Before doing a full integration you will probably want to run some tests. For this you can use the Postman application, a brief explanation of how to install and use it correctly will be given below.</p>
+
+							<li><b>Postman installation</b></li>
+							<p>To install Postman you must access the site https://www.postman.com/downloads and proceed to download the installer compatible with your operating system.</p>
+
+							<li><b>Essential tests</b></li>
+							<p>After installing Postman, you can begin to perform the necessary tests. In this section we will use some endpoints of the Cargofive API that will be explained in detail later.</p>
+							<ul>
+								<li><b>Headers</b></li>
+								<p>Before making a request, you must configure the corresponding headers:</p>
+								<p><code>Content-Type: application/json</code></p>
+								<p><code>X-Requested-With: XMLHttpRequest</code></p>
+
+								<li><b>Get Bearer Token</b></li>
+								<p>To perform an operation on the Cargofive API, you must have a valid Bearer Token, which certifies that it is correctly authenticated.</p>
+								<p>To obtain the Bearer Token you will have to make a POST call to the endpoint https://app.cargofive.com/oauth/token along with the following parameters that you must configure in the Body tab by selecting form-data:</p>
+								<ul>
+									<li><b>client_id:</b>The client id that has been provided by Cargofive.</li>
+									<li><b>client_secret:</b>The client secret that has been provided by Cargofive.</li>
+									<li><b>grant_type:</b> Here you must put "password".</li>
+									<li><b>username:</b> The email with which you are registered in Cargofive.</li>
+									<li><b>password:</b> The password you use to enter Cargofive.</li>
+								</ul>
+								<br>
+								<p>When completing the request, you will be given the "access_token" with which you can access the different endpoints of the Cargofive API. To do this, you must copy the value between the quotation marks (“) and paste it in the Bearer Token value located in the authorization tab for all the requests that you will make to the Cargofive API.</p>
+
+								<li><b>Make a test request</b></li>
+								<p>By having a valid bearer token (access_token) you can perform the different operations that are allowed by the API. To do this, you must first configure the bearer token obtained in the previous process. Before making any request, go to the Authorization tab and in the Type drop-down select the Bearer Token option and finally in the token field paste the value of the bearer token (access_token).</p>
+
+								<p>Once the bearer token is configured, it will be ready to make a valid request to the API. In this opportunity, a GET request will be exemplified to consult rates to the following endpoint:</p>
+									
+								<a href="#">https://api.cargofive.com/search/rates/group/ORIGIN/DESTINY/START/END/TYPE</a></p>
+
+								<p><b>Método:</b> GET</p>
+
+								<p>The parameters to be used on the endpoint are:</p>
+								<ul>
+									<li><b>ORIGIN:</b> Origin port using UN / LOCODE</li>
+									<li><b>DESTINY:</b> Destination port using UN / LOCODE</li>
+									<li><b>START:</b> Validity start date (YYYY-MM-DD)</li>
+									<li><b>END:</b> Validity end date (YYYY-MM-DD)</li>
+									<li><b>TYPE:</b>  DRY, REEFER, OPENTOP y FLATRACK.</li>
+								</ul>
+								<br>
+								<p>The result of this operation will be a json with the information corresponding to the rates that meet the criteria of the parameters sent.</p>
+							</ul>
+						</ul>
+					</section>
+					<!--//section-->
+					<section class="docs-section" id="item-3-3">
+						<h2 class="section-heading">Endpoints available</h2>
+						<p>To access each endpoint, you must have a valid bearer token. All requests have the following optional parameters available:</p>
+						<ul>
+							<li><b>size (integer)</b>: Limits the number of records that a request returns.</li>
+							<li><b>paginate (integer)</b>: Paginate the results according to the indicated value.</li>
+						</ul>
+						<p>Cargofive REST API <code>https://app.cargofive.com/api/v1/</code></p>
+						
+						<p>Note that there are some endpoints pointing to the URL: <code>https://api.cargofive.com/</code></p>
+					</section>
+					<section class="docs-section" id="item-3-4">
+						<ul>
+							<li><b>Get token</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/oauth/token</code></p>
+							<p><code><b>Method:</b>POST</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+								<li><b>grant_type:</b> Type of access required by the token generator, its value is "password".</li>
+								<li><b>username:</b> email to access Cargofive.</li>
+								<li><b>password:</b>  password to access Cargofive.</li>
+								<li><b>scope:</b> its default value will be *.</li>
+								<li><b>client_id:</b> Number value provided in the generation of tokens.</li>
+								<li><b>client_secret:</b> Hash oauth provided in token generation.</li>
+							</ul>
+							<br>
+							<p><b>Returns:</b> JSON with Bearer token (access_token).</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-5">
+						<ul>
+							<li><b>Users</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/user</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Returns:</b> JSON with the authenticated user details.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-6">
+						<ul>
+							<li><b>List of Quotes (Deprecated)</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/quotes</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+								<li><b>Integration:</b> True // If the value is true, the list will only return new and / or recently edited quotes, ignoring those that have already been integrated previously.</li>
+								<li><b>Type:</b> FCL, LCL o AIR.</li>
+								<li><b>Status:</b> Win, Draft, Sent.</li>
+								<li><b>Size:</b> Limits the number of records that the query returns. Enter a integer number.</li>
+							</ul>
+							<br>
+							<p><b>Returns:</b> JSON array with the detail of each quote associated with the user who consults.</p>
+							<p><b>Model:</b> <a href="Quotes.json" download>Download JSON</a></p>
+							<br>
+							<li><b>Quote by ID (Deprecated)</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/quotes/ID</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Parámetros</b></p>
+							<ul>
+								<li><b>ID:</b> ID of the quote to consult.</li>
+							</ul>
+							<br>
+							<p><b>Returns:</b> JSON with the details of the requested quote.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-19">
+						<ul>
+							<li><b>List of Quotes | version 2</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v2/quotes</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+								<li><b>Integration:</b> True // If the value is true, the list will only return new and / or recently edited quotes, ignoring those that have already been integrated previously.</li>
+								<li><b>Type:</b> FCL, LCL o AIR.</li>
+								<li><b>Status:</b> Win, Draft, Sent.</li>
+								<li><b>Paginate:</b> Allows you to indicate the number of records to obtain per page. Enter a integer number.</li>
+							</ul>
+							<br>
+							<p><b>Returns:</b> JSON with list of quotes. By default, the result is paged at a maximum of 100 records per page.</p>
+							<p><b>Model:</b> <a href="QuotesV2.json" download>Download JSON</a></p>
+							<br>
+							<li><b>Quote by ID | versión 2</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v2/quotes/ID</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+								<li><b>ID:</b> ID of the quote to consult.</li>
+							</ul>
+							<br>
+							<p><b>Returns:</b> JSON with the details of the requested quote.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-7">
+						<ul>
+							<li><b>Companies</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/companies</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Returns:</b> JSON array with the detail of each client company associated with the querying user.</p>
+							<br>
+							<li><b>Create Company</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/company</code></p>
+							<p><code><b>Method:</b>POST</code></p>
+							<p><b>Parameters</b></p>
+							<p>Parameters marked with * are mandatory</p>
+							<ul>
+								<li><b>business_name* (string):</b> Company name (required).</li>
+								<li><b>phone (string):</b> Company phone number.</li>
+								<li><b>address (string):</b> Company address.</li>
+								<li><b>email (string):</b> Email.</li>
+								<li><b>tax_number (string):</b> Taxpayer number.</li>
+								<li><b>options (json):</b> Allows you to save additional values in a json array.</li>
+								<li><b>pdf_language (enum | 'spanish','english','portuguese'):</b>Language in which the PDF is generated for a quote associated with the company that is being created.</li>
+								<li><b>payment_conditions (string):</b> Payment terms.</li>
+							</ul>
+							<br>
+							<li><b>See Company Details</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/company/ID</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+								<li><b>ID (integer):</b> Id of the company to consult.</li>
+							</ul>
+							<br>
+							<p><b>Returns:</b> JSON with the details of the requested company.</p>
+							<br>
+							<li><b>Update Company</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/company/ID</code></p>
+							<p><code><b>Method:</b>PUT</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+								<li><b>ID (integer):</b> Id of the company to modify.</li>
+							</ul>
+							<p>
+								<b>Important:</b> When carrying out tests with postman, it may be that when sending the request with PUT, it may not complete the requested action (It is a documented postman incident). If this happens, change the method to POST and add the following to the body form-data: _method: PUT.</p>
+							<br>
+							<li><b>Delete Company</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/company/ID</code></p>
+							<p><code><b>Method:</b>DELETE</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+								<li><b>ID (integer):</b> Id of the company to delete.</li>
+							</ul>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-8">
+						<ul>
+							<li><b>Contacts</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contacts</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Returns:</b> JSON array with the detail of each contact belonging to the companies associated with the querying user.</p>
+							<br>
+							<li><b>Create Contact</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contact</code></p>
+							<p><code><b>Method:</b>POST</code></p>
+							<p><b>Parameters</b></p>
+							<p>Parameters marked with * are required</p>
+							<ul>
+								<li><b>first_name* (string):</b> First name (required).</li>
+								<li><b>last_name* (string):</b> Last name (required).</li>
+								<li><b>email (string):</b> Email.</li>
+								<li><b>phone (string):</b> Phone number.</li>
+								<li><b>position (string):</b> Position in the company.</li>
+								<li><b>options (json):</b> Allows you to save additional values in a json array.</li>
+								<li><b>company_id (integer):</b>  ID of the company with which the contact will be associated.</li>
+							</ul>
+							<br>
+							<li><b>See Contact</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contact/ID</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+								<li><b>ID (integer):</b> ID of the contact to consult.</li>
+							</ul>
+							<br>
+							<p><b>Returns:</b> JSON with the details of the requested contact.</p>
+							<br>
+							<li><b>Update Contact</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contact/ID</code></p>
+							<p><code><b>Method:</b>PUT</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+								<li><b>ID (integer):</b> ID of the contact to modify.</li>
+							</ul>
+							<p>
+								<b>Important:</b> When carrying out tests with postman it may be that when sending the request with PUT, it does not complete the requested action (It is a documented postman incident), if this happens, change the method to POST and add it to the form-data of the body the following: _method: PUT.
+							</p>
+							<br>
+							<li><b>Delete Contact</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contact/ID</code></p>
+							<p><code><b>Method:</b>DELETE</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+								<li><b>ID (integer):</b> ID of the contact to delete.</li>
+							</ul>
+						</ul>
+					</section>
+					<!--<section class="docs-section" id="item-3-9">
+						<ul>
+							<li><b>Tarifas FCL</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/fcl/rates</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Returns:</b> Arreglo JSON con el detalle de cada rate FCL asociado al usuario que consulta.</p>
+						</ul>
+					</section>-->
+					<section class="docs-section" id="item-3-11">
+						<ul>
+							<li><b>Local Charges FCL</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/fcl/global/charges</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Returns:</b> JSON array with the detail of each local FCL charge associated with the querying user.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-12">
+						<ul>
+							<li><b>Rates with parameters</b></li>
+							<p><code><b>URL:</b>https://api.cargofive.com/search/rates/group/ORIGIN/DESTINY/START/END/TYPE</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+									<li><b>ORIGIN:</b> Origin port using UN / LOCODE</li>
+									<li><b>DESTINY:</b> Destination port using UN / LOCODE</li>
+									<li><b>START:</b> Validity start date (YYYY-MM-DD)</li>
+									<li><b>END:</b> Validity end date (YYYY-MM-DD)</li>
+									<li><b>TYPE:</b>  DRY, REEFER, OPENTOP y FLATRACK.</li>
+							</ul>
+							<br>
+							<p><b>Returns:</b> JSON array with rates for the requested route.</p>
+							<p><b>Model:</b> <a href="Tarifas-group.json" download>Download JSON</a></p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-10">
+						<ul>
+							<li><b>Tarifas con parámetros sin agrupar</b></li>
+							<p><code><b>URL:</b>https://api.cargofive.com/search/rates/nogroup/ORIGIN/DESTINY/START/END/TYPE</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+									<li><b>ORIGIN:</b> Origin port using UN / LOCODE</li>
+									<li><b>DESTINY:</b> Destination port using UN / LOCODE</li>
+									<li><b>START:</b> Validity start date (YYYY-MM-DD)</li>
+									<li><b>END:</b> Validity end date (YYYY-MM-DD)</li>
+									<li><b>TYPE:</b>  DRY, REEFER, OPENTOP y FLATRACK.</li>
+							</ul>
+							<br>
+							<p><b>Returns:</b> JSON array with rates for the requested route without grouping.</p>
+							<p><b>Model:</b> <a href="Tarifas-nogroup.json" download>Download JSON</a></p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-13">
+						<ul>
+							<li><b>Contrats</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contracts</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Returns:</b> JSON array with the detail of each contract associated with the querying user.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-14">
+						<ul>
+							<li><b>Shipping companies</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/carriers</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Returns:</b> JSON array with list of shipping companies.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-15">
+						<ul>
+							<li><b>Airlines</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/airlines</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Returns:</b> JSON array with list of airlines.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-16">
+						<ul>
+							<li><b>List of Surcharges</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/surcharges</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Returns:</b> JSON array with all surcharges associated with the authenticated user's company.</p>
+							<br>
+							<li><b>Create Surcharge</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/surcharge</code></p>
+							<p><code><b>Method:</b>POST</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+								<li><b>name (string):</b> Name of the surcharge.</li>
+								<li><b>description (string):</b> Description of the surcharge.</li>
+								<li><b>options (json):</b> Allows you to save additional values in a json array.</li>
+							</ul>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-17">
+						<ul>
+							<li><b>Generate PDF</b></li>
+							<p><code><b>URL:</b>https://api.cargofive.com/pdf</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Parameters</b></p>
+							<ul>
+								<li><b>ID (integer):</b> Unique identifier of the quote.</li>
+							</ul>
+							<br>
+							<p><b>Returns:</b> Downloadable .pdf file.</p>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-3-18">
+						<ul>
+							<li><b>Changelog</b></li>
+							<br>
+							<p><a href="changelog.md" target="_blank">See changelog</a></p>
+						</ul>
+					</section>
+					<!--//section-->
+				</article>
+				<!--//docs-article-->
+
+				<!--<article class="docs-article" id="section-9">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">FAQs</h1>
+					    <section class="docs-intro">
+						    <p>Section intro goes here. You can list all your FAQs using the format below.</p>
+						</section>
+				    </header>
+				     <section class="docs-section" id="item-9-1">
+						<h2 class="section-heading">Section Item 9.1 <small>(FAQ Category One)</small></h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>What's sit amet quam eget lacinia?</h5>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>How to ipsum dolor sit amet quam tortor?</h5>
+						<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Can I  bibendum sodales?</h5>
+						<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Where arcu sed urna gravida?</h5>
+						<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac. In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec urna. </p>
+					</section>
+					
+					<section class="docs-section" id="item-9-2">
+						<h2 class="section-heading">Section Item 9.2 <small>(FAQ Category Two)</small></h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>What's sit amet quam eget lacinia?</h5>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>How to ipsum dolor sit amet quam tortor?</h5>
+						<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Can I  bibendum sodales?</h5>
+						<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Where arcu sed urna gravida?</h5>
+						<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac. In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec urna. </p>
+					</section>
+					
+					<section class="docs-section" id="item-9-3">
+							<h2 class="section-heading">Section Item 9.3 <small>(FAQ Category Three)</small></h2>
+						    <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>How to dapibus sollicitudin justo vel fermentum?</h5>
+							<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+							<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>How long bibendum sodales?</h5>
+							<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+							<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Where dapibus sollicitudin?</h5>
+							<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac. In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec urna. </p>
+					</section>
+			    </article><!--//docs-article-->
+
+				<footer class="footer">
+					<div class="container text-center py-5">
+						<small class="copyright">Template Copyright &copy; <a href="https://themes.3rdwavemedia.com/"
+								target="_blank">3rd Wave Media</a></small>
+							<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+								<li class="list-inline-item"><a href="https://twitter.com/cargofive" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
+								<li class="list-inline-item"><a href="https://instagram.com/cargofive" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
+							</ul>
+						<!--//social-list-->
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<!--//docs-wrapper-->
+
+
+
+	<!-- Javascript -->
+	<script src="../assets/plugins/jquery-3.4.1.min.js"></script>
+	<script src="../assets/plugins/popper.min.js"></script>
+	<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+	<!-- Page Specific JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+	<script src="../assets/js/highlight-custom.js"></script>
+	<script src="../assets/plugins/jquery.scrollTo.min.js"></script>
+	<script src="../assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>
+	<script src="../assets/js/docs.js"></script>
+
+</body>
+
+</html>
