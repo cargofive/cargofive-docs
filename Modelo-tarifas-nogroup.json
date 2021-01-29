@@ -1,89 +1,89 @@
 [
    {
       "Rates":{
-         "type": Tipo de Carga. Puede ser FCL o LCL
+         "type":"Tipo de Carga (FCL o LCL)",
          "origin_port":{
-            "name": Nombre del puerto de destino,
-            "code": Código del puerto de destino
+            "name":"Nombre del puerto de destino",
+            "code":"Código del puerto de destino"
          },
          "destination_port":{
-            "name": Nombre del puerto de destino,
-            "code": Código del puerto de destino
+            "name":"Nombre del puerto de destino",
+            "code":"Código del puerto de destino"
          },
-         "ocean_freight":{ (Segmento para el flete base)
-            "type": Tipo de cargo (Ocean Freight),
-            "detail": Nombre del calculation type,
-            "currency": Moneda utilizada para el total,
+         "ocean_freight":{
+            "type":"Tipo de cargo (Ocean Freight)",
+            "detail":"Nombre del calculation type",
+            "currency":"Moneda utilizada para el total",
             "rates":[
                {
-                  "type": Tipo de contenedor,
-                  "price": monto,
-                  "currency": moneda
+                  "type":"Tipo de contenedor",
+                  "price":"monto",
+                  "currency":"moneda"
                }
             ]
          },
-         "freight_charges":[ (Segmento para los gastos de flete)
+         "freight_charges":[
             {
-               "type": Tipo de contenedor,
-               "surcharge_name": Nombre del surcharge (recargo),
-               "surcharge_options": Opciones adicionales para el surcharge (Si aplican),
-               "price": monto,
-               "currency": moneda,
-               "currency_id": ID de la moneda en base de datos,
-               "calculation_type": Nombre del calculation type,
-               "monto": Campo para uso interno (Omitir)
+               "type":"Tipo de contenedor",
+               "surcharge_name":"Nombre del surcharge (recargo)",
+               "surcharge_options":"Opciones adicionales para el surcharge (Si aplican)",
+               "price":"monto",
+               "currency":"moneda",
+               "currency_id":"ID de la moneda en base de datos",
+               "calculation_type":"Nombre del calculation type",
+               "monto":"Campo para uso interno (Omitir)"
             }
          ],
-         "destination_charges":[ (Segmento para los gastos en destino)
+         "destination_charges":[
             {
-               "type": Tipo de contenedor,
-               "surcharge_name": Nombre del surcharge,
-               "surcharge_options": opciones adicionales (Si aplican),
-               "price": monto,
-               "currency": moneda,
-               "currency_id": ID de la moneda en base de datos,
-               "calculation_type": Nombre del calculation type,
-               "monto": Campo para uso interno (Omitir)
+               "type":"Tipo de contenedor",
+               "surcharge_name":"Nombre del surcharge (recargo)",
+               "surcharge_options":"Opciones adicionales para el surcharge (Si aplican)",
+               "price":"monto",
+               "currency":"moneda",
+               "currency_id":"ID de la moneda en base de datos",
+               "calculation_type":"Nombre del calculation type",
+               "monto":"Campo para uso interno (Omitir)"
             }
          ],
-         "origin_charges":[ (Segmento para los gastos en origen)
+         "origin_charges":[
             {
-               "type": Tipo de contenedor,
-               "surcharge_name": Nombre del surcharge,
-               "surcharge_options": opciones adicionales (Si aplican),
-               "price": monto,
-               "currency": moneda,
-               "currency_id": ID de la moneda en base de datos,
-               "calculation_type": Nombre del calculation type,
-               "monto": Campo para uso interno (Omitir)
+               "type":"Tipo de contenedor",
+               "surcharge_name":"Nombre del surcharge (recargo)",
+               "surcharge_options":"Opciones adicionales para el surcharge (Si aplican)",
+               "price":"monto",
+               "currency":"moneda",
+               "currency_id":"ID de la moneda en base de datos",
+               "calculation_type":"Nombre del calculation type",
+               "monto":"Campo para uso interno (Omitir)"
             }
          ],
-         "total20DV": Total para el contenedor 20' Dry,
-         "total40DV": Total para el contenedor 40' Dry,
-         "total40HC": Total para el contenedor 40' HC,
-         "total45HC": Total para el contenedor 45' HC,
-         "total40NOR": Total para el contenedor 40' NOR,
-         "currency": Moneda del total,
+         "total20DV":"Total para el contenedor 20' Dry",
+         "total40DV":"Total para el contenedor 40' Dry",
+         "total40HC":"Total para el contenedor 40' HC",
+         "total45HC":"Total para el contenedor 45' HC",
+         "total40NOR":"Total para el contenedor 40' NOR",
+         "currency":"Moneda del total",
          "schedule":{
-            "service": Tipo de servicio (Direct/Transhipment),
-            "transit_time": Tiempo de tránsito,
-            "via": Escala en el viaje (Aplica para transhipment)
+            "service":"Tipo de servicio (Direct/Transhipment)",
+            "transit_time":"Tiempo de tránsito",
+            "via":"Escala en el viaje (Aplica para transhipment)"
          },
          "carrier":{
-            "id": ID en base de datos,
-            "name": Nombre de la compañía naviera,
-            "uncode": UNCODE de la compañía naviera,
-            "image": Nombre de la imagen del logo,
-            "url": URI para el logo de la compañía
+            "id":"ID en base de datos",
+            "name":"Nombre de la compañía naviera",
+            "uncode":"UNCODE de la compañía naviera",
+            "image":"Nombre de la imagen del logo",
+            "url":"URI para el logo de la compañía"
          },
          "contract":{
-            "valid_from": Fecha inicial de validez del contrato,
-            "valid_until": Fecha final de validez del contrato,
-            "number": N/A,
-            "ref": Referencia/Nombre del contrato,
-            "status": Estatus del contrato (published, incomplete, expired)
+            "valid_from":"Fecha inicial de validez del contrato",
+            "valid_until":"Fecha final de validez del contrato",
+            "number":"N/A",
+            "ref":"Referencia/Nombre del contrato",
+            "status":"Estatus del contrato (published, incomplete, expired)"
          },
-         "remarks": Comentarios sobre la tarifa
+         "remarks":"Comentarios sobre la tarifa"
       }
-   },
+   }
 ]
