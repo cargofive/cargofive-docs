@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "business_name": "Company Inc",
+        "phone": "555123444",
+        "address": "Avenida Portugal, 123, Lisboa",
+        "email": "info@cargofive.com",
+        "tax_number": "321AC190",
+        "logo": "Logos/Clients/10/logo.jpg",
+        "associated_quotes": null,
+        "company_user_id": 1,
+        "owner": 1,
+        "api_id": null,
+        "api_status": null,
+        "pdf_language": "0",
+        "payment_conditions": null,
+	"options": {
+            "additional_field": "001"
+        },
+        "created_at": "2018-09-19 12:37:14",
+        "updated_at": "2019-07-10 13:47:19",
+        "group_user_companies": [],
+        "user": {
+            "id": 1,
+            "name": "Mike",
+            "lastname": "Smith",
+            "email": "mike@cargofive.com",
+            "phone": "1214971345"
+        },
+        "company_user": {
+            "id": 1,
+            "name": "Cargofive",
+            "address": "ALMAFUERTE Y GORRITI SN",
+            "phone": "939414129"
+        }
+    }
+]

@@ -1,0 +1,36 @@
+[
+    {
+        "id": ID base de datos,
+        "business_name": Nombre de la entidad,
+        "phone": Número de teléfono,
+        "address": Dirección,
+        "email": Correo electrónico,
+        "tax_number": Número fiscal,
+        "logo": URI logo,
+        "associated_quotes": Omitir,
+        "company_user_id": ID para asociar a la compañía,
+        "owner": ID del usuario que creó el registro,
+        "api_id": Omitir,
+        "api_status": Omitir,
+        "pdf_language": ID del lenguaje prederteminado para el PDF de las ofertas,
+        "payment_conditions": Condiciones de pago,
+	"options": { // Arreglo para añadir campos adicionales opcionales
+            Key: Value
+        },
+        "created_at": Fecha de creación,
+        "updated_at": Fecha de actualización,
+        "user": {
+            "id": ID base de datos,
+            "name": Nombres,
+            "lastname": Apellidos,
+            "email": Correo electrónico,
+            "phone": Número de teléfono
+        },
+        "company_user": {
+            "id": ID base de datos,
+            "name": Nombre de la compañía dueña del registro,
+            "address": Dirección,
+            "phone": Número de teléfono
+        }
+    }
+]
