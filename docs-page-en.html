@@ -312,6 +312,8 @@
 							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/companies</code></p>
 							<p><code><b>Method:</b>GET</code></p>
 							<p><b>Returns:</b> JSON array with the detail of each client company associated with the querying user.</p>
+							<p><b>Example:</b> <a href="company-example.json" download>Download JSON</a></p>
+							<p><b>Model:</b> <a href="company-model.txt" download>Download file</a></p>
 							<br>
 							<li><b>Create Company</b></li>
 							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/company</code></p>
@@ -336,6 +338,8 @@
 							<ul>
 								<li><b>ID (integer):</b> Id of the company to consult.</li>
 							</ul>
+							<p><b>Example:</b> <a href="company-example.json" download>Download JSON</a></p>
+							<p><b>Model:</b> <a href="company-model.txt" download>Download file</a></p>
 							<br>
 							<p><b>Returns:</b> JSON with the details of the requested company.</p>
 							<br>
@@ -346,8 +350,7 @@
 							<ul>
 								<li><b>ID (integer):</b> Id of the company to modify.</li>
 							</ul>
-							<p>
-								<b>Important:</b> When carrying out tests with postman, it may be that when sending the request with PUT, it may not complete the requested action (It is a documented postman incident). If this happens, change the method to POST and add the following to the body form-data: _method: PUT.</p>
+							<p><b>Important:</b> When carrying out tests with postman, it may be that when sending the request with PUT, it may not complete the requested action (It is a documented postman incident). If this happens, change the method to POST and add the following to the body form-data: _method: PUT.</p>
 							<br>
 							<li><b>Delete Company</b></li>
 							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/company/ID</code></p>
