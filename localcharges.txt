@@ -1,18 +1,18 @@
 [
     {
-        "id": ID base de datos,
-        "charge": Nombre del recargo,
-        "charge_type": Donde aplica,
-        "calculation_type": Tipo de cálculo,
-	"origin_port": Puerto de origen,
-	"destination_port": Puerto de destino,
-	"origin_country": País de origen,
-	"destination_country": País de destino,
-        "carriers": Naviera,
-        "amount": Monto,
-        "currency_code": Moneda,
+        "id": (int) ID base de datos,
+        "charge": (string) Nombre del recargo,
+        "charge_type": (string) Donde aplica,
+        "calculation_type": (string) Tipo de cálculo,
+	"origin_port": (string) Puerto de origen,
+	"destination_port": (string) Puerto de destino,
+	"origin_country": (string) País de origen,
+	"destination_country": (string) País de destino,
+        "carriers": (string) Naviera,
+        "amount": (string) Monto,
+        "currency_code": (string) Moneda,
         "valid_from":  (date | yyyy-mm-dd) Fecha inicio,
         "valid_until":  (date | yyyy-mm-dd) Fecha fin,
-        "company_user": Nombre compañía dueña del registro en base de datos
+        "company_user":  (string) Nombre compañía dueña del registro en base de datos
     },
 ]
