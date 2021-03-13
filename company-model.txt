@@ -1,36 +1,36 @@
 [
     {
-        "id": ID base de datos,
-        "business_name": Nombre de la entidad,
-        "phone": Número de teléfono,
-        "address": Dirección,
-        "email": Correo electrónico,
-        "tax_number": Número fiscal,
-        "logo": URI logo,
-        "associated_quotes": Omitir,
-        "company_user_id": ID para asociar a la compañía,
-        "owner": ID del usuario que creó el registro,
-        "api_id": Omitir,
-        "api_status": Omitir,
-        "pdf_language": ID del lenguaje prederteminado para el PDF de las ofertas,
-        "payment_conditions": Condiciones de pago,
-	"options": { // Arreglo para añadir campos adicionales opcionales
+        "id": (int) ID base de datos,
+        "business_name": (string) Nombre de la entidad,
+        "phone": (string)  Número de teléfono,
+        "address": (string)  Dirección,
+        "email": (string)  Correo electrónico,
+        "tax_number": (string)  Número fiscal,
+        "logo": (string)  URI logo,
+        "associated_quotes": (array) Omitir,
+        "company_user_id": (integer) ID para asociar a la compañía,
+        "owner": (int) ID del usuario que creó el registro,
+        "api_id": (int) Omitir,
+        "api_status": (string) Omitir,
+        "pdf_language": (int) ID del lenguaje prederteminado para el PDF de las ofertas,
+        "payment_conditions": (string) Condiciones de pago,
+	"options": { (array)
             Key: Value
         },
-        "created_at": Fecha de creación,
-        "updated_at": Fecha de actualización,
-        "user": {
-            "id": ID base de datos,
-            "name": Nombres,
-            "lastname": Apellidos,
-            "email": Correo electrónico,
-            "phone": Número de teléfono
+        "created_at": (date | yyyy-mm-dd h:m:s) Fecha de creación,
+        "updated_at": (date | yyyy-mm-dd h:m:s)  Fecha de actualización,
+        "user": { (array)
+            "id": (int) ID base de datos,
+            "name": (string) Nombres,
+            "lastname": (string) Apellidos,
+            "email": (string) Correo electrónico,
+            "phone": (string) Número de teléfono
         },
         "company_user": {
-            "id": ID base de datos,
-            "name": Nombre de la compañía dueña del registro,
-            "address": Dirección,
-            "phone": Número de teléfono
+            "id": (int) ID base de datos,
+            "name": (string) Nombre de la compañía dueña del registro,
+            "address": (string) Dirección,
+            "phone": (string) Número de teléfono
         }
     }
 ]

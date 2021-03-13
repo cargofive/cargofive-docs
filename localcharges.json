@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "charge": "LSS",
+        "charge_type": "freight",
+        "calculation_type": "Per Container Dry",
+        "origin_port": "CNSHA",
+        "destination_port": "ESBCN",
+        "carriers": "CMA CGM",
+        "amount": 150,
+        "currency_code": "USD",
+        "valid_from": "2019-05-01",
+        "valid_until": "2019-12-31",
+        "company_user": "Cargofive"
+    },
+]
