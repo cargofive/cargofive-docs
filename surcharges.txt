@@ -1,0 +1,15 @@
+[
+    {
+        "id": (integer) ID base de datos,
+        "name": (string) Nombre de surcharge,
+        "description": (string) Descripción del surcharge,
+	"options": { (array) //Arreglo con información adicional propia del cliente
+            "additional_field": "field"
+        },
+        "variation": (array) null,
+        "sale_term_id": (integer) null,
+        "company_user_id": (integer) ID compañía dueña del registro,
+        "created_at": (date | yyyy-mm-dd h:m:s) Fecha creación,
+        "updated_at": (date | yyyy-mm-dd h:m:s) Fecha actualización
+    }
+]
