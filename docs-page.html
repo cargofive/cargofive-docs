@@ -491,7 +491,7 @@
 					<section class="docs-section" id="item-3-12">
 						<ul>
 							<li><b>Tarifas con parámetros</b></li>
-							<p><code><b>URL:</b>https://api.cargofive.com/search/rates/group/ORIGEN/DESTINO/INICIO/FIN/TIPO</code></p>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/rates/group/ORIGEN/DESTINO/INICIO/FIN/TIPO</code></p>
 							<p><code><b>Método:</b>GET</code></p>
 							<p><b>Parámetros</b></p>
 							<ul>
@@ -500,6 +500,7 @@
 								<li><b>INICIO:</b>  Fecha de validez inicial (YYYY-MM-DD).</li>
 								<li><b>FIN:</b>  Fecha de validez final (YYYY-MM-DD).</li>
 								<li><b>TIPO:</b>  DRY, REEFER, OPENTOP y FLATRACK.</li>
+								<li><b>OPCIONAL:</b> Puede indicar el flujo a consultar mediante un parámetro de tipo query llamado "traffic" y las opciones que admite son "import" o "export".</li>
 							</ul>
 							<br>
 							<p><b>Retorna:</b> Arreglo JSON con las tarifas para la ruta solicitada.</p>
@@ -510,7 +511,7 @@
 					<section class="docs-section" id="item-3-10">
 						<ul>
 							<li><b>Tarifas con parámetros sin agrupar</b></li>
-							<p><code><b>URL:</b>https://api.cargofive.com/search/rates/nogroup/ORIGEN/DESTINO/INICIO/FIN/TIPO</code></p>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/rates/nogroup/ORIGEN/DESTINO/INICIO/FIN/TIPO</code></p>
 							<p><code><b>Método:</b>GET</code></p>
 							<p><b>Parámetros</b></p>
 							<ul>
@@ -519,6 +520,7 @@
 								<li><b>INICIO:</b>  Fecha de validez inicial (YYYY-MM-DD).</li>
 								<li><b>FIN:</b>  Fecha de validez final (YYYY-MM-DD).</li>
 								<li><b>TIPO:</b>  DRY, REEFER, OPENTOP y FLATRACK.</li>
+								<li><b>OPCIONAL:</b> Puede indicar el flujo a consultar mediante un parámetro de tipo query llamado "traffic" y las opciones que admite son "import" o "export".</li>
 							</ul>
 							<br>
 							<p><b>Retorna:</b> Arreglo JSON con las tarifas para la ruta solicitada sin agrupar.</p>
