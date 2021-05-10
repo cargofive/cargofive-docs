@@ -1,0 +1,263 @@
+{
+   "data":{
+      "id":7964,
+      "type":"FCL",
+      "quote_id":"CA-421",
+      "custom_quote_id":null,
+      "equipment":[
+         "20DV",
+         "40DV",
+         "40HC"
+      ],
+      "valid_from":"2021-04-01",
+      "valid_until":"2021-04-30",
+      "date_issued":"2021-04-01",
+      "status":"Draft",
+      "incoterm":"FOB",
+      "custom_incoterm":"Custom FOB",
+      "delivery":"Port to Port",
+      "cargo_type":null,
+      "total_quantity":null,
+      "total_weight":null,
+      "total_volume":null,
+      "chargeable_weight":null,
+      "kind_of_cargo":"General",
+      "gdp":null,
+      "risk_level":null,
+      "commodity":"Carga",
+      "spanish_remarks":"<p><strong>Lorem Ipsum<\/strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<\/p>",
+      "english_remarks":"<p><strong>Lorem Ipsum<\/strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<\/p>",
+      "portuguese_remarks":null,
+      "localcharge_remarks":"<p><strong>Lorem Ipsum<\/strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<\/p>",
+      "spanish_terms_conditions":"<p><strong>Lorem Ipsum<\/strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<\/p>",
+      "english_terms_conditions":"<p><strong>Lorem Ipsum<\/strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<\/p>",
+      "portuguese_terms_conditions":null,
+      "payment_conditions":null,
+      "owner":"Cargofive",
+      "created_by":"Sebastian Cazajus",
+      "created_at":"2021-04-09 23:25:35",
+      "updated_at":"2021-05-10 21:58:18",
+      "company":{
+         "business_name":"Cargofive Inc",
+         "address":"Portugal",
+         "phone":"555444333",
+         "options":{
+            "custom_code":"AC-001"
+         }
+      },
+      "contact":{
+         "first_name":"Sebastian",
+         "last_name":"Cazajus",
+         "email":"sebastian@cargofive.com",
+         "phone":"333222111"
+      },
+      "ocean_freight":[
+         {
+            "id":11866,
+            "contract":"FAK QT23423423",
+            "valid_from":"2021-01-01",
+            "valid_until":"2021-04-30",
+            "profit":{
+               "m20DV":100,
+               "m40DV":100,
+               "m40HC":100
+            },
+            "total":{
+               "c20DV":1150,
+               "c40DV":1150,
+               "c40HC":1150
+            },
+            "currency":"USD",
+            "origin":"Barcelona, ESBCN",
+            "destiny":"Shanghai, CNSHA",
+            "transit_time":30,
+            "via":null,
+            "carrier":{
+               "id":3,
+               "name":"CMA CGM",
+               "uncode":"CMA",
+               "scac":"CMDU",
+               "url":"https:\/\/cargofive-production-21.s3.eu-central-1.amazonaws.com\/imgcarrier\/cma.png"
+            },
+            "charges":[
+               {
+                  "id":60162,
+                  "charge":"Logistic fee",
+                  "charge_id":1046,
+                  "charge_options":null,
+                  "calculation_type":"Per Container DRY",
+                  "calculation_type_code":"per_cont_dry",
+                  "price":{
+                     "c20DV":50,
+                     "c40DV":50,
+                     "c40HC":50
+                  },
+                  "currency":"USD"
+               },
+               {
+                  "id":60163,
+                  "charge":"Ocean Freight",
+                  "charge_id":null,
+                  "charge_options":null,
+                  "calculation_type":"Per Container DRY",
+                  "calculation_type_code":"per_cont_dry",
+                  "price":{
+                     "c20DV":1000,
+                     "c40DV":1000,
+                     "c40HC":1000
+                  },
+                  "currency":"USD"
+               }
+            ]
+         }
+      ],
+      "origin_charges":[
+         {
+            "id":5700,
+            "charge":"CFO",
+            "charge_id":3,
+            "charge_options":null,
+            "calculation_type":"Per Container DRY",
+            "calculation_type_code":"per_cont_dry",
+            "port":"Barcelona, ESBCN",
+            "price":{
+               "c20DV":55,
+               "c40DV":55,
+               "c40HC":55
+            },
+            "profit":{
+               "m20DV":0,
+               "m40DV":0,
+               "m40HC":0
+            },
+            "total":{
+               "c20DV":55,
+               "c40DV":55,
+               "c40HC":55
+            },
+            "units":null,
+            "currency":"EUR",
+            "provider":"CMA CGM"
+         }
+      ],
+      "destination_charges":[
+         {
+            "id":5701,
+            "charge":"THC",
+            "charge_id":3,
+            "charge_options":null,
+            "calculation_type":"Per Container DRY",
+            "calculation_type_code":"per_cont_dry",
+            "port":"Shanghai, CNSHA",
+            "price":{
+               "c20DV":33,
+               "c40DV":33,
+               "c40HC":33
+            },
+            "profit":{
+               "m20DV":0,
+               "m40DV":0,
+               "m40HC":0
+            },
+            "total":{
+               "c20DV":33,
+               "c40DV":33,
+               "c40HC":33
+            },
+            "units":null,
+            "currency":"EUR",
+            "provider":"CMA CGM"
+         }
+      ],
+      "inlands":[
+         {
+            "id":3154,
+            "type":"Origin",
+            "contract":"N/A",
+            "charge":"Inland",
+            "distance":519,
+            "port":"Barcelona, ESBCN",
+            "address":null,
+            "provider":"Transporte Terrestre C.A.",
+            "valid_from":"2021-04-01",
+            "valid_until":"2021-04-01",
+            "price":{
+               "c20DV":51,
+               "c40DV":51,
+               "c40HC":51
+            },
+            "profit":{
+               "m20DV":0,
+               "m40DV":0,
+               "m40HC":0
+            },
+            "total":{
+               "c20DV":51,
+               "c40DV":51,
+               "c40HC":51
+            },
+            "currency":"EUR"
+         }
+      ],
+      "original_origin_charges":[
+         {
+            "id":60161,
+            "type":"origin",
+            "charge":"CFO",
+            "charge_id":3,
+            "charge_options":null,
+            "calculation_type":"Per Container DRY",
+            "calculation_type_code":"per_cont_dry",
+            "port":"Barcelona, ESBCN",
+            "price":{
+               "c20DV":55,
+               "c40DV":55,
+               "c40HC":55
+            },
+            "profit":{
+               "m20DV":0,
+               "m40DV":0,
+               "m40HC":0
+            },
+            "total":{
+               "c20DV":55,
+               "c40DV":55,
+               "c40HC":55
+            },
+            "units":null,
+            "currency":"EUR",
+            "provider":"CMA CGM"
+         }
+      ],
+      "original_destination_charges":[
+         {
+            "id":60164,
+            "type":"destiny",
+            "charge":"THC",
+            "charge_id":255,
+            "charge_options":null,
+            "calculation_type":"Per Container DRY",
+            "calculation_type_code":"per_cont_dry",
+            "port":"Shanghai, CNSHA",
+            "price":{
+               "c20DV":33,
+               "c40DV":33,
+               "c40HC":33
+            },
+            "profit":{
+               "m20DV":0,
+               "m40DV":0,
+               "m40HC":0
+            },
+            "total":{
+               "c20DV":33,
+               "c40DV":33,
+               "c40HC":33
+            },
+            "units":null,
+            "currency":"EUR",
+            "provider":"CMA CGM"
+         }
+      ]
+   }
+}
