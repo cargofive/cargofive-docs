@@ -1,0 +1,303 @@
+{
+
+   "data":{
+
+      "id":int| Identificador base de datos,
+
+      "type": string | Tipo de cotización (FCL o LCL),
+
+      "quote_id": string | Identificador cotización,
+
+      "custom_quote_id": string | Identificador personalizado,
+
+      "equipment": array | Tipos de contenedores,
+
+      "valid_from": date | Fecha de validez inicial,
+
+      "valid_until": date | Fecha de validez final,
+
+      "date_issued": date | Fecha de creación,
+
+      "status": string | Estatus de la cotización,
+
+      "incoterm": string | Incoterm,
+
+      "custom_incoterm": string | Incoterm personalizado,
+
+      "delivery": string | Tipo de entrega,
+
+      "cargo_type": string | Tipo de carga (LCL),
+
+      "total_quantity": float | Cantidad total (LCL),
+
+      "total_weight": float | Peso total (LCL),
+
+      "total_volume": float | Volumen total (LCL),
+
+      "chargeable_weight":float | Peso tasable (LCL),
+
+      "kind_of_cargo": string | Tipo de carga,
+
+      "gdp": boolean,
+
+      "risk_level": string | Nivel de riesgo,
+
+      "commodity": string,
+
+      "spanish_remarks": string | Comentarios generales en español,
+
+      "english_remarks": string | Comentarios generales en inglés,
+
+      "portuguese_remarks": string | Comentarios generales en portugués,
+
+      "localcharge_remarks": string | Comentarios para los gastos locales,
+
+      "spanish_terms_conditions": string | Términos y condiciones en español,
+
+      "english_terms_conditions": string | Términos y condiciones en inglés,
+
+      "portuguese_terms_conditions":string | Términos y condiciones en portugués,,
+
+      "payment_conditions":string | Condiciones de pago,
+
+      "owner": string | Usuario dueño de la cotización,
+
+      "created_by": string | Usuario que creó la cotización,
+
+      "created_at": datetime | Fecha de creación en base de datos,
+
+      "updated_at": datetime | Fecha de última actualización en base de datos,
+
+      "company": array | Compañia asociada a la cotización
+	  
+      "contact": array | Persona a quien va dirigida la cotización,
+
+      "ocean_freight":[ // Detalles de la ruta
+
+         {
+
+            "id": int | Identificador base de datos ,
+
+            "contract": string | Nombre del contrato al que pertenece la tarifa
+
+            "valid_from": date | fecha validez inicial del contrato,
+
+            "valid_until": date | fecha validez final del contrato,
+
+            "profit": FCL - array | LCL - float | Margén ganancia sobre el total del flete,
+
+            "total": FCL - array | LCL - float | Total del flete,
+
+            "currency": string | Moneda del flete,
+
+            "origin": string | Puerto de origen,
+
+            "destiny": string | Puerto de destino,
+
+            "transit_time": int | Tiempo de tránsito en días,
+
+            "via": string | Via para los embarques con transbordos,
+
+            "carrier":{
+
+               "name": string | Nombre de la naviera,
+
+               "uncode": string | Código de la naviera,
+
+               "scac": string | Código SCAC,
+
+               "url": string | Enlace para el logo
+
+            },
+
+            "charges":[ //Detalle de los conceptos de flete
+
+               {
+
+                  "charge": string | Nombre del recargo,
+
+                  "charge_id": int | Identificador del recargo en base de datos,
+
+                  "charge_options":array | Opciones adicionales personalizada por cliente,
+
+                  "calculation_type": string | Tipo de cálculo,
+
+                  "calculation_type_code": string | Código único del tipo de cálculo,
+
+                  "price": FCL - array | LCL - float | Detalle de precios,
+
+                  "currency": string | Moneda del recargo
+
+               }
+
+            ]
+
+         }
+
+      ],
+
+      "origin_charges":[ //Gastos locales en origen (Venta)
+
+         {
+
+            "charge": string | Nombre del recargo,
+
+            "charge_id": int | Identificador del recargo en base de datos,
+
+            "charge_options":array | Opciones adicionales personalizada por cliente,
+
+            "calculation_type": string | Tipo de cálculo,
+
+            "calculation_type_code": string | Código único del tipo de cálculo,
+
+            "port": string | Puerto donde aplica el recargo,
+
+            "price": FCL - array | LCL - float | Detalle de precios,
+
+            "profit": FCL - array | LCL - float | Margén ganancia,
+
+            "total": FCL - array | LCL - float | Total del flete,
+
+            "units": float | Unidades (LCL),
+
+            "currency": string | Moneda del recargo,
+
+            "provider": string | Nombre del proveedor
+
+         }
+
+      ],
+
+      "destination_charges":[ //Gastos locales en destino (Venta)
+
+         {
+
+            "charge": string | Nombre del recargo,
+
+            "charge_id": int | Identificador del recargo en base de datos,
+
+            "charge_options":array | Opciones adicionales personalizada por cliente,
+
+            "calculation_type": string | Tipo de cálculo,
+
+            "calculation_type_code": string | Código único del tipo de cálculo,
+
+            "port": string | Puerto donde aplica el recargo,
+
+            "price": FCL - array | LCL - float | Detalle de precios,
+
+            "profit": FCL - array | LCL - float | Margén ganancia,
+
+            "total": FCL - array | LCL - float | Total del flete,
+
+            "units": float | Unidades (LCL),
+
+            "currency": string | Moneda del recargo,
+
+            "provider": string | Nombre del proveedor
+
+         }
+
+      ],
+
+      "inlands":[
+
+         {
+
+	    "type": string | Tipo de recargo (Origin, Destiny)
+
+            "charge": string | Nombre del recargo,
+
+            "port": string | Puerto donde aplica el inland,
+
+            "address": string | Dirección,
+
+            "provider": string | Nombre del proveedor,
+
+            "valid_from": date | fecha validez inicial de la tarifa,
+
+            "valid_until": date | fecha validez final de la tarifa,
+
+            "price": FCL - array | LCL - float | Detalle de precios,
+
+            "profit": FCL - array | LCL - float | Margén ganancia,
+
+            "total": FCL - array | LCL - float | Total del flete,
+
+            "currency": string | Moneda del recargo,
+
+         }
+
+      ],
+
+      "original_origin_charges":[ //Gastos locales en origen (Compra)
+
+         {
+
+			"type": string | Tipo de recargo
+
+            "charge": string | Nombre del recargo,
+
+            "charge_id": int | Identificador del recargo en base de datos,
+
+            "charge_options":array | Opciones adicionales personalizada por cliente,
+
+            "calculation_type": string | Tipo de cálculo,
+
+            "calculation_type_code": string | Código único del tipo de cálculo,
+
+            "port": string | Puerto donde aplica el recargo,
+
+            "price": FCL - array | LCL - float | Detalle de precios,
+
+            "profit": FCL - array | LCL - float | Margén de ganancia,
+
+            "total": FCL - array | LCL - float | Total del flete,
+
+            "units": float | Unidades (LCL),
+
+            "currency": string | Moneda del recargo,
+
+            "provider": string | Nombre del proveedor
+
+         }
+
+      ],
+
+      "original_destination_charges":[ //Gastos locales en destino (Compra)
+
+        {
+
+	    "type": string | Tipo de recargo
+			
+            "charge": string | Nombre del recargo,
+
+            "charge_id": int | Identificador del recargo en base de datos,
+
+            "charge_options":array | Opciones adicionales personalizada por cliente,
+
+            "calculation_type": string | Tipo de cálculo,
+
+            "calculation_type_code": string | Código único del tipo de cálculo,
+
+            "port": string | Puerto donde aplica el recargo,
+
+            "price": FCL - array | LCL - float | Detalle de precios,
+
+            "profit": FCL - array | LCL - float | Margén ganancia,
+
+            "total": FCL - array | LCL - float | Total del flete,
+
+            "units": float | Unidades (LCL),
+
+            "currency": string | Moneda del recargo,
+
+            "provider": string | Nombre del proveedor
+
+         }
+
+      ]
+
+   }
+
+}
