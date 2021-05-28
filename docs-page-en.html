@@ -136,7 +136,7 @@
 			<div class="container">
 				<article class="docs-article" id="introduction">
 					<header class="docs-header">
-						<h1 class="docs-heading">Cargofive <span class="docs-time">Last update: 14-04-2021</span></h1>
+						<h1 class="docs-heading">Cargofive <span class="docs-time">Last update: 28-05-2021</span></h1>
 						<section class="docs-intro">
 							<p>Cargofive is a platform that allows you to search, compare and manage maritime freight rates between different shipping companies in record time, managing to obtain quotes in just a few minutes.</p>
 						</section>
@@ -472,6 +472,24 @@
 							<p><b>Model:</b> <a href="Modelo-tarifas-nogroup.json" download>Download JSON</a></p>
 						</ul>
 					</section>
+				        <section class="docs-section" id="item-3-19">
+						<ul>
+							<li><b>FCL Rates by Contracts (Beta)</b></li>
+							<p><code><b>URL:</b>http://cargofive.local/api/v1/getContract</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Parameters</b></p>
+							<p>All parameters must be sent in query format at the end of the URL</p>
+							<ul>
+								<li><b>direction:</b>  1 (import), 2 (export) y 3 (both).</li>
+								<li><b>container:</b>  1 (DRY), 2 (Reefer), 3 (Open Top) y 4 (Flat Rack)</li>
+								<li><b>since:</b>  Validity start date (YYYY-MM-DD).</li>
+								<li><b>until:</b>  Validity end date (YYYY-MM-DD).</li>
+							</ul>
+							<br>
+							<p><b>Returns:</b> JSON array with rates.</p>
+							<p><b>Model:</b> <a href="Rates-By-Contracts-Model.json" download>Download JSON</a></p>
+						</ul>
+					</section>				
 					<section class="docs-section" id="item-3-13">
 						<ul>
 							<li><b>Contrats</b></li>
