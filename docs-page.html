@@ -96,6 +96,7 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-11">Gastos locales FCL</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-12">Tarifas FCL con parámetros</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-10">Tarifas FCL con parámetros sin agrupar</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-19">Tarifas FCL por contrato</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-13">Contratos</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-14">Navieras</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-15">Aerolíneas</a></li>
@@ -527,6 +528,24 @@
 							<p><b>Retorna:</b> Arreglo JSON con las tarifas para la ruta solicitada sin agrupar.</p>
 							<p><b>Ejemplo:</b> <a href="Tarifas-nogroup.json" download>Descargar JSON</a></p>
 							<p><b>Modelo:</b> <a href="Modelo-tarifas-nogroup.json" download>Descargar JSON</a></p>
+						</ul>
+					</section>
+				        <section class="docs-section" id="item-3-19">
+						<ul>
+							<li><b>Tarifas FCL por contrato (Beta)</b></li>
+							<p><code><b>URL:</b>http://cargofive.local/api/v1/getContract</code></p>
+							<p><code><b>Método:</b>GET</code></p>
+							<p><b>Parámetros</b></p>
+							<p>Todos los parámetros deben enviarse con formato query al final de URL</p>
+							<ul>
+								<li><b>direction:</b>  Las opciones permitidas son 1 (import), 2 (export) y 3 (ambos).</li>
+								<li><b>container:</b>  Las opciones permitidas son 1 (DRY), 2 (Reefer), 3 (Open Top) y 4 (Flat Rack)</li>
+								<li><b>since:</b>  Fecha de validez inicial (YYYY-MM-DD).</li>
+								<li><b>until:</b>  Fecha de validez final (YYYY-MM-DD).</li>
+							</ul>
+							<br>
+							<p><b>Retorna:</b> Arreglo JSON con las tarifas asociadas a los contratos que coincidan con los parámetros de búsqueda.</p>
+							<p><b>Modelo:</b> <a href="Rates-By-Contracts-Model.json" download>Descargar JSON</a></p>
 						</ul>
 					</section>
 					<section class="docs-section" id="item-3-13">
