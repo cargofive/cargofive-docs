@@ -1,0 +1,45 @@
+[
+	{
+        "contract": {
+            "general": {
+                "contract": string | Nombre del contrato,
+                "reference": int | ID del contrato,
+                "carrier": string | Naviera,
+                "direction": string | Flujo de la operación (Import, Export),
+                "origin": string | Puerto de origen,
+                "destination": string | Puerto de destino,
+                "valid_from": string | Fecha de validez inicial,
+                "valid_until": string | Fecha de validez final
+            },
+            "ocean_freight": {
+                "20DV": float | valor tarifa de 20DV,
+                "40DV": float | valor tarifa de 40DV,
+                "40HC": float | valor tarifa de 40HC,
+                "45HC": float | valor tarifa de 45HC,
+                "40NOR": float | valor tarifa de 40NOR,
+                "charge": string | Tipo de concepto,
+                "currency": string | Moneda
+            },
+            "surcharges": [
+                {
+		   "charge": string | Tipo de concepto,                
+		   "20DV": float | valor tarifa de 20DV,
+		   "40DV": float | valor tarifa de 40DV,
+		   "40HC": float | valor tarifa de 40HC,
+		   "45HC": float | valor tarifa de 45HC,
+		   "40NOR": float | valor tarifa de 40NOR,
+		   "currency": string | Moneda
+                }
+            ],
+            "allIn": {
+                "charge": "ALL-IN",
+		 "20DV": float | valor tarifa all-in de 20DV,
+		 "40DV": float | valor tarifa all-in40DV,
+		 "40HC": float | valor tarifa all-in 40HC,
+		 "45HC": float | valor tarifa all-in 45HC,
+		 "40NOR": float | valor tarifa all-in 40NOR,
+		 "currency": string | Moneda
+            }
+        }
+    }
+]
