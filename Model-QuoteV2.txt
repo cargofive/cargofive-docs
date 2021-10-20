@@ -60,6 +60,8 @@
 
       "payment_conditions":string | Condiciones de pago,
 
+      "owner_id": int | Identificador numérico del usuario dueño de la cotización,
+
       "owner": string | Usuario dueño de la cotización,
 
       "created_by": string | Usuario que creó la cotización,
@@ -69,8 +71,44 @@
       "updated_at": datetime | Fecha de última actualización en base de datos,
 
       "company": array | Compañia asociada a la cotización
-	  
-      "contact": array | Persona a quien va dirigida la cotización,
+
+      "company": {
+
+          "id": int | Identificador numérico del registro,
+
+          "business_name": string | Nombre de la compañía,
+
+          "address": string | Dirección de la compañía,
+
+          "phone": string | Número de teléfono de la compañía,
+
+          "options": array | Opciones personalizadas del usuario
+      },
+	
+      "contact": {
+                
+          "id": int | Identificador numérico del registro,
+
+          "first_name": string | Nombre del cliente a quien va dirigida la oferta,
+
+          "last_name": string | Apellido del cliente a quien va dirigida la oferta,
+
+          "email": string | Correo electrónico del cliente a quien va dirigida la oferta,
+
+          "phone": string | Número de teléfono del cliente a quien va dirigida la oferta,
+      },
+
+      "exchange_rates": [ // Arreglo con monedas y tipos de cambio presentes en la oferta
+      	{
+            "custom": <omitir>,
+
+            "alphacode": string | código de la moneda,
+
+            "exchangeEUR": float | tasa de cambio a Euros,
+
+            "exchangeUSD": float | tasa de cambio a Dólares
+         }
+      ],
 
       "ocean_freight":[ // Detalles de la ruta
 
@@ -108,6 +146,8 @@
 
                "url": string | Enlace para el logo
 
+	      "referential_data": array | Arreglo con data personalizada del cliente
+
             },
 
             "charges":[ //Detalle de los conceptos de flete
@@ -118,7 +158,7 @@
 
                   "charge_id": int | Identificador del recargo en base de datos,
 
-                  "charge_options":array | Opciones adicionales personalizada por cliente,
+                  "charge_options": array | Opciones adicionales personalizada por cliente,
 
                   "calculation_type": string | Tipo de cálculo,
 
@@ -161,8 +201,21 @@
             "units": float | Unidades (LCL),
 
             "currency": string | Moneda del recargo,
+                
+	    "provider": {
 
-            "provider": string | Nombre del proveedor
+                "id": int | identificador numérico proveedor,
+                    
+                "name": string | nombre proveedor,
+                    
+	        "type": string | Tipo de proveedor (proveedor, carrier),
+                    
+                "description": string | descripción sobre el proveedor,
+                    
+                "company_user_id": int | id de la compañía a la que se asocia el proveedor (Aplica para proveedores creados en el módulo providers de Cargofive),
+                    
+                "referential_data": array | Arreglo con data personalizada del cliente
+            }
 
          }
 
@@ -194,7 +247,20 @@
 
             "currency": string | Moneda del recargo,
 
-            "provider": string | Nombre del proveedor
+	    "provider": {
+
+                "id": int | identificador numérico proveedor,
+                    
+                "name": string | nombre proveedor,
+                    
+	        "type": string | Tipo de proveedor (proveedor, carrier),
+                    
+                "description": string | descripción sobre el proveedor,
+                    
+                "company_user_id": int | id de la compañía a la que se asocia el proveedor (Aplica para proveedores creados en el módulo providers de Cargofive),
+                    
+                "referential_data": array | Arreglo con data personalizada del cliente
+            }
 
          }
 
@@ -204,9 +270,13 @@
 
          {
 
+	    "id": int | identificador numérico del registro	    
+
 	    "type": string | Tipo de recargo (Origin, Destiny)
 
-            "charge": string | Nombre del recargo,
+	    "contract": string | contrato asociado al inland
+
+            "charge": string | Nombre del concepto,
 
             "port": string | Puerto donde aplica el inland,
 
@@ -220,9 +290,9 @@
 
             "price": FCL - array | LCL - float | Detalle de precios,
 
-            "profit": FCL - array | LCL - float | Margén ganancia,
+            "profit": FCL - array | LCL - float | Margen ganancia,
 
-            "total": FCL - array | LCL - float | Total del flete,
+            "total": FCL - array | LCL - float | Total (suma price y profit),
 
             "currency": string | Moneda del recargo,
 
@@ -230,11 +300,11 @@
 
       ],
 
-      "original_origin_charges":[ //Gastos locales en origen (Compra)
+      "original_origin_charges":[ //Gastos locales en origen (Costes)
 
          {
 
-			"type": string | Tipo de recargo
+	   "type": string | Tipo de recargo
 
             "charge": string | Nombre del recargo,
 
@@ -258,13 +328,26 @@
 
             "currency": string | Moneda del recargo,
 
-            "provider": string | Nombre del proveedor
+	    "provider": {
+
+                "id": int | identificador numérico proveedor,
+                    
+                "name": string | nombre proveedor,
+                    
+	        "type": string | Tipo de proveedor (proveedor, carrier),
+                    
+                "description": string | descripción sobre el proveedor,
+                    
+                "company_user_id": int | id de la compañía a la que se asocia el proveedor (Aplica para proveedores creados en el módulo providers de Cargofive),
+                    
+                "referential_data": array | Arreglo con data personalizada del cliente
+            }
 
          }
 
       ],
 
-      "original_destination_charges":[ //Gastos locales en destino (Compra)
+      "original_destination_charges":[ //Gastos locales en destino (Costes)
 
         {
 
@@ -292,7 +375,20 @@
 
             "currency": string | Moneda del recargo,
 
-            "provider": string | Nombre del proveedor
+	    "provider": {
+
+                "id": int | identificador numérico proveedor,
+                    
+                "name": string | nombre proveedor,
+                    
+	        "type": string | Tipo de proveedor (proveedor, carrier),
+                    
+                "description": string | descripción sobre el proveedor,
+                    
+                "company_user_id": int | id de la compañía a la que se asocia el proveedor (Aplica para proveedores creados en el módulo providers de Cargofive),
+                    
+                "referential_data": array | Arreglo con data personalizada del cliente
+            }
 
          }
 
