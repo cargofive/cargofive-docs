@@ -1,0 +1,467 @@
+[
+    {
+        "validityFrom": "2021-01-01",
+        "validityTo": "2021-12-31",
+        "type": "FCL",
+        "apiSpot": true,
+        "carrier": {
+            "name": "Maersk",
+            "code": "MSK",
+            "url":"https://cargofive-production-21.s3.amazonaws.com/imgcarrier/msc.png"
+        },
+        "contract": { 
+            "status": "published",
+            "code": "q1111",
+            "reference": "FAK QT23423423 copy"
+        },
+        "loadingPort": {
+            "name": "Shanghai",
+            "code": "CNSHA"
+        },
+        "dischargePort": {
+            "name": "Barcelona",
+            "code": "ESBCN"
+        },
+        "pricingDetails": {
+            "totalRatePerType": {
+                "totalRateOrigin": [
+                    {
+                        "container": "20DV",
+                        "total": "355.78",
+                        "totalUsd": "355.78",
+                        "currencyCode": "USD"
+                    },
+                    {
+                        "container": "40DV",
+                        "total": "377.20",
+                        "totalUsd": "377.20",
+                        "currencyCode": "USD"
+                    },
+                    {
+                        "container": "40HC",
+                        "total": "377.20",
+                        "totalUsd": "377.20",
+                        "currencyCode": "USD"
+                    },
+                    {
+                        "container": "45HC",
+                        "total": "317.70",
+                        "totalUsd": "317.70",
+                        "currencyCode": "USD"
+                    },
+                    {
+                        "container": "40NOR",
+                        "total": "317.70",
+                        "totalUsd": "317.70",
+                        "currencyCode": "USD"
+                    }
+                ],
+                "totalRateFreight": [
+                    {
+                        "container": "20DV",
+                        "total": "350.00",
+                        "totalUsd": "350.00",
+                        "currencyCode": "USD"
+                    },
+                    {
+                        "container": "40DV",
+                        "total": "450.00",
+                        "totalUsd": "450.00",
+                        "currencyCode": "USD"
+                    },
+                    {
+                        "container": "40HC",
+                        "total": "450.00",
+                        "totalUsd": "450.00",
+                        "currencyCode": "USD"
+                    },
+                    {
+                        "container": "45HC",
+                        "total": "300.00",
+                        "totalUsd": "380.00",
+                        "currencyCode": "EUR"
+                    },
+                    {
+                        "container": "40NOR",
+                        "total": "450.00",
+                        "totalUsd": "450.00",
+                        "currencyCode": "USD"
+                    }
+                ],
+                "totalRateDestination": []
+            },
+            "totalRatePerContainer": [
+                {
+                    "container": "20DV",
+                    "qty": 1,
+                    "total": "706.00",
+                    "currencyCode": "USD"
+                },
+                {
+                    "container": "40DV",
+                    "qty": 1,
+                    "total": "828.00",
+                    "currencyCode": "USD"
+                },
+                {
+                    "container": "40HC",
+                    "qty": 1,
+                    "total": "828.00",
+                    "currencyCode": "USD"
+                },
+                {
+                    "container": "45HC",
+                    "qty": 1,
+                    "total": "768.00",
+                    "currencyCode": "USD"
+                },
+                {
+                    "container": "40NOR",
+                    "qty": 1,
+                    "total": "768.00",
+                    "currencyCode": "USD"
+                }
+            ],
+            "ocean_freight": {
+                  "type": "Ocean Freight",
+                  "detail": "Per Container",
+                  "currency": "USD",
+                  "rates": [
+                      {
+                          "type": "20DV",
+                          "price": "100.00",
+                          "currency": "USD"
+                      },
+                      {
+                          "type": "40DV",
+                          "price": "200.00",
+                          "currency": "USD"
+                      },
+                      {
+                          "type": "40HC",
+                          "price": "300.00",
+                          "currency": "USD"
+                      }
+                    ]
+            },
+            "surcharges": {
+                "originSurcharges": [
+                    {
+                        "container": "20DV",
+                        "surcharges": [
+                            {
+                                "chargeName": "BL FEE",
+                                "chargeCode": "BL FEE",
+                                "calculationType": "Per BL",
+                                "amount": "50.00",
+                                "amountUsd": "59.50",
+                                "currencyCode": "EUR",
+                                "surcharge_options": {
+                                  "code": "BLD01"
+                                }
+                            },
+                            {
+                                "chargeName": "THC",
+                                "chargeCode": "THC",
+                                "calculationType": "Per Container DRY",
+                                "amount": "217.00",
+                                "amountUsd": "258.21",
+                                "currencyCode": "EUR",
+                                "surcharge_options": {
+                                  "code": "THC01"
+                                }
+                            },
+                            {
+                                "chargeName": "T3",
+                                "chargeCode": "T3",
+                                "calculationType": "Per 20 DV",
+                                "amount": "32.00",
+                                "amountUsd": "38.08",
+                                "currencyCode": "EUR",
+                                "surcharge_options": {
+                                  "code": "TR01"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "container": "40DV",
+                        "surcharges": [
+                            {
+                                "chargeName": "BL FEE",
+                                "chargeCode": "BL FEE",
+                                "calculationType": "Per BL",
+                                "amount": "50.00",
+                                "amountUsd": "59.50",
+                                "currencyCode": "EUR",
+                                "surcharge_options": {
+                                  "code": "BLD01"
+                                }
+                            },
+                            {
+                                "chargeName": "THC",
+                                "chargeCode": "THC",
+                                "calculationType": "Per Container DRY",
+                                "amount": "217.00",
+                                "amountUsd": "258.21",
+                                "currencyCode": "EUR",
+                                "surcharge_options": {
+                                  "code": "THD01"
+                                }
+                            },
+                            {
+                                "chargeName": "T3",
+                                "chargeCode": "T3",
+                                "calculationType": "Per 40 DV",
+                                "amount": "50.00",
+                                "amountUsd": "59.50",
+                                "currencyCode": "EUR",
+                                "surcharge_options": {
+                                  "code": "TRD01"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "container": "40HC",
+                        "surcharges": [
+                            {
+                                "chargeName": "BL FEE",
+                                "chargeCode": "BL FEE",
+                                "calculationType": "Per BL",
+                                "amount": "50.00",
+                                "amountUsd": "59.50",
+                                "currencyCode": "EUR",
+                                "surcharge_options": {
+                                  "code": "BLD01"
+                                }
+                            },
+                            {
+                                "chargeName": "THC",
+                                "chargeCode": "THC",
+                                "calculationType": "Per Container DRY",
+                                "amount": "217.00",
+                                "amountUsd": "258.21",
+                                "currencyCode": "EUR",
+                                "surcharge_options": {
+                                  "code": "THC01"
+                                }
+                            },
+                            {
+                                "chargeName": "T3",
+                                "chargeCode": "T3",
+                                "calculationType": "Per 40 HC",
+                                "amount": "50.00",
+                                "amountUsd": "59.50",
+                                "currencyCode": "EUR",
+                                "surcharge_options": {
+                                  "code": "TRD01"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "container": "45HC",
+                        "surcharges": [
+                            {
+                                "chargeName": "BL FEE",
+                                "chargeCode": "BL FEE",
+                                "calculationType": "Per BL",
+                                "amount": "50.00",
+                                "amountUsd": "59.50",
+                                "currencyCode": "EUR",
+                                "surcharge_options": {
+                                  "code": "BLD01"
+                                }
+                            },
+                            {
+                                "chargeName": "THC",
+                                "chargeCode": "THC",
+                                "calculationType": "Per Container DRY",
+                                "amount": "217.00",
+                                "amountUsd": "258.21",
+                                "currencyCode": "EUR",
+                                "surcharge_options": {
+                                  "code": "THC01"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "container": "40NOR",
+                        "surcharges": [
+                            {
+                                "chargeName": "BL FEE",
+                                "chargeCode": "BL FEE",
+                                "calculationType": "Per BL",
+                                "amount": "50.00",
+                                "amountUsd": "59.50",
+                                "currencyCode": "EUR",
+                                "surcharge_options": {
+                                  "code": "BLD01"
+                                }
+                            },
+                            {
+                                "chargeName": "THC",
+                                "chargeCode": "THC",
+                                "calculationType": "Per Container DRY",
+                                "amount": "217.00",
+                                "amountUsd": "258.21",
+                                "currencyCode": "EUR",
+                                "surcharge_options": {
+                                  "code": "THC01"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "freightSurcharges": [
+                    {
+                        "container": "20DV",
+                        "surcharges": [
+                            {
+                                "chargeName": "created in the import of the file",
+                                "chargeCode": "PSS",
+                                "calculationType": "Per TEU Dry",
+                                "amount": "100.00",
+                                "amountUsd": "100.00",
+                                "currencyCode": "USD",
+                                "surcharge_options": {
+                                  "code": "PSS01"
+                                }
+                            },
+                            {
+                                "chargeName": "created in the import of the file",
+                                "chargeCode": "IMP",
+                                "calculationType": "Per Container DRY",
+                                "amount": "250.00",
+                                "amountUsd": "250.00",
+                                "currencyCode": "USD",
+                                "surcharge_options": {
+                                  "code": "IMP01"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "container": "40DV",
+                        "surcharges": [
+                            {
+                                "chargeName": "created in the import of the file",
+                                "chargeCode": "PSS",
+                                "calculationType": "Per TEU Dry",
+                                "amount": "200.00",
+                                "amountUsd": "200.00",
+                                "currencyCode": "USD",
+                                "surcharge_options": {
+                                  "code": "PSS01"
+                                }
+                            },
+                            {
+                                "chargeName": "created in the import of the file",
+                                "chargeCode": "IMP",
+                                "calculationType": "Per Container DRY",
+                                "amount": "250.00",
+                                "amountUsd": "250.00",
+                                "currencyCode": "USD",
+                                "surcharge_options": {
+                                  "code": "IMP01"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "container": "40HC",
+                        "surcharges": [
+                            {
+                                "chargeName": "created in the import of the file",
+                                "chargeCode": "PSS",
+                                "calculationType": "Per TEU Dry",
+                                "amount": "200.00",
+                                "amountUsd": "200.00",
+                                "currencyCode": "USD",
+                                "surcharge_options": {
+                                  "code": "PSS01"
+                                }
+                            },
+                            {
+                                "chargeName": "created in the import of the file",
+                                "chargeCode": "IMP",
+                                "calculationType": "Per Container DRY",
+                                "amount": "250.00",
+                                "amountUsd": "250.00",
+                                "currencyCode": "USD",
+                                "surcharge_options": {
+                                  "code": "IMP01"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "container": "45HC",
+                        "surcharges": [
+                            {
+                                "chargeName": "created in the import of the file",
+                                "chargeCode": "PSS",
+                                "calculationType": "Per TEU Dry",
+                                "amount": "200.00",
+                                "amountUsd": "200.00",
+                                "currencyCode": "USD",
+                                "surcharge_options": {
+                                  "code": "PSS01"
+                                }
+                            },
+                            {
+                                "chargeName": "created in the import of the file",
+                                "chargeCode": "IMP",
+                                "calculationType": "Per Container DRY",
+                                "amount": "250.00",
+                                "amountUsd": "250.00",
+                                "currencyCode": "USD",
+                                "surcharge_options": {
+                                  "code": "IMP01"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "container": "40NOR",
+                        "surcharges": [
+                            {
+                                "chargeName": "created in the import of the file",
+                                "chargeCode": "PSS",
+                                "calculationType": "Per TEU Dry",
+                                "amount": "200.00",
+                                "amountUsd": "200.00",
+                                "currencyCode": "USD",
+                                "surcharge_options": {
+                                  "code": "PSS01"
+                                }
+                            },
+                            {
+                                "chargeName": "created in the import of the file",
+                                "chargeCode": "IMP",
+                                "calculationType": "Per Container DRY",
+                                "amount": "250.00",
+                                "amountUsd": "250.00",
+                                "currencyCode": "USD",
+                                "surcharge_options": {
+                                  "code": "IMP01"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "destinySurcharges": []
+            }
+        },
+        "transitTime": {
+            "via": "",
+            "transit_time": "",
+            "service": ""
+        },
+        "aditionalData": {
+            "remarks": "<br>"
+        },
+    }
+]
