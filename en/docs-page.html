@@ -446,7 +446,7 @@
 					</section>
 					<section class="docs-section" id="item-3-10">
 						<ul>
-							<li><b>Tarifas con parámetros sin agrupar</b></li>
+							<li><b>Rate with parameters without grouping</b></li>
 							<p><code><b>URL:</b>https://api.cargofive.com/search/rates/nogroup/ORIGIN/DESTINY/START/END/TYPE</code></p>
 							<p><code><b>Method:</b>GET</code></p>
 							<p><b>Parameters</b></p>
@@ -468,6 +468,22 @@
 							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contracts</code></p>
 							<p><code><b>Method:</b>GET</code></p>
 							<p><b>Returns:</b> JSON array with the detail of each contract associated with the querying user.</p>
+							<br>
+							<li><b>Create contract</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/upload/contract</code></p>
+							<p><code><b>Method:</b>POST</code></p>
+							<p><b>Parameters</b></p>
+							<p>Parameters marked with * are required</p>
+							<ul>
+								<li><b>type* (string):</b> FCL or LCL</li>
+								<li><b>reference* (string):</b> Custom reference (required)</li>
+								<li><b>direction* (string):</b> import, export or both</li>
+								<li><b>carriers* (integer):</b> IDs associated to the carrier (See carriers list)</li>
+								<li><b>valid_from* (date):</b> YYYY/MM/DD</li>
+								<li><b>valid_until* (date):</b> YYYY/MM/DD</li>
+								<li><b>file* (file):</b>  Excel or PDF file with rates</li>
+							</ul>
+							<br>
 						</ul>
 					</section>
 					<section class="docs-section" id="item-3-14">
