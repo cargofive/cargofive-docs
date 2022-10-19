@@ -102,7 +102,7 @@
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-15">Airlines</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-16">Surcharges</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-17">Create PDF</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-18">Changelog</a></li>
+					<!--<li class="nav-item"><a class="nav-link scrollto" href="#item-3-18">Changelog</a></li>-->
 					<!--<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder mr-2"><i class="fas fa-cogs"></i></span>Integrations</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Section Item 4.1</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Section Item 4.2</a></li>
@@ -497,6 +497,22 @@
 							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contracts</code></p>
 							<p><code><b>Method:</b>GET</code></p>
 							<p><b>Returns:</b> JSON array with the detail of each contract associated with the querying user.</p>
+							<br>
+							<li><b>Create Contract</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/upload/contract</code></p>
+							<p><code><b>Method:</b>POST</code></p>
+							<p><b>Parameters</b></p>
+							<p>Parameters marked with * are required</p>
+							<ul>
+								<li><b>type* (string):</b> FCL or LCL (required)</li>
+								<li><b>reference* (string):</b> Custom reference (required)</li>
+								<li><b>direction* (string):</b> import, export or both</li>
+								<li><b>carriers* (integer):</b> IDs associated to the carrier (See carriers list)</li>
+								<li><b>valid_from* (string):</b> YYYY/MM/DD</li>
+								<li><b>valid_until* (string):</b> YYYY/MM/DD</li>
+								<li><b>file* (file):</b>  Excel or PDF file with rates</li>
+							</ul>
+							<br>
 						</ul>
 					</section>
 					<section class="docs-section" id="item-3-14">
