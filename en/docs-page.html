@@ -426,6 +426,25 @@
 							<p><b>Returns:</b> JSON array with the detail of each local FCL charge associated with the querying user.</p>
 						</ul>
 					</section>
+					<section class="docs-section" id="item-3-20">
+						<ul>
+							<li><b>Rates FCL v2 (New API)</b></li>
+							<p><code><b>URL:</b>https://api.cargofive.com/api/rates</code></p>
+							<p><code><b>Method:</b>GET</code></p>
+							<p><b>Parameters (Query)</b></p>
+							<ul>
+								<li><b>origin:</b>  Origin port UN/LOCODE.</li>
+								<li><b>destination:</b>  Destination port UN/LOCODE.</li>
+								<li><b>startDate:</b>  valid from (YYYY-MM-DD).</li>
+								<li><b>endDate:</b>  valid until (YYYY-MM-DD).</li>
+								<li><b>type:</b>  DRY, REEFER, OPENTOP y FLATRACK.</li>
+								<li><b>includeApiSpot(opcional):</b> Carrier code //all,maersk,cmacgm,evergreen,hapag-lloyd,sealand.</li>
+							</ul>
+							<br>
+							<p><b>Retorna:</b> JSON array with rates for the requested rout.</p>
+							<p><b>Ejemplo:</b> <a href="api-rates-new.json" download>Descargar JSON</a></p>
+						</ul>
+					</section>
 					<section class="docs-section" id="item-3-12">
 						<ul>
 							<li><b>Rates with parameters</b></li>
