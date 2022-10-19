@@ -574,6 +574,22 @@
 							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/contracts</code></p>
 							<p><code><b>Método:</b>GET</code></p>
 							<p><b>Retorna:</b> Arreglo JSON con el detalle de cada contrato asociado al usuario que consulta.</p>
+							<br>
+							<li><b>Crear contacto</b></li>
+							<p><code><b>URL:</b>https://app.cargofive.com/api/v1/upload/contract</code></p>
+							<p><code><b>Método:</b>POST</code></p>
+							<p><b>Parámetros</b></p>
+							<p>Parámetros marcados con * son obligatorios</p>
+							<ul>
+								<li><b>type* (string):</b> FCL o LCL</li>
+								<li><b>reference* (string):</b> Identificador/Referencia personalizada</li>
+								<li><b>direction* (string):</b> import, export o both</li>
+								<li><b>carriers* (integer):</b> Identificadores de navieras (Ver listado de navieras de Cargofive)</li>
+								<li><b>valid_from* (date):</b> YYYY/MM/DD</li>
+								<li><b>valid_until* (date):</b> YYYY/MM/DD</li>
+								<li><b>file* (file):</b> Archivo excel o PDF con tarifas</li>
+							</ul>
+							<br>
 						</ul>
 					</section>
 					<section class="docs-section" id="item-3-14">
